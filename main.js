@@ -11,7 +11,7 @@ const { chromium } = require('playwright');
 const fs           = require('fs').promises;
 
 const CONCURRENCY = 3;
-const AI_ENABLED  = !!process.env.ANTHROPIC_API_KEY;
+const AI_ENABLED  = !!(process.env.GEMINI_API_KEY || process.env.ANTHROPIC_API_KEY);
 
 function isHomepage(url) {
     try { return new URL(url).pathname.replace(/\/$/, '') === ''; }
@@ -217,8 +217,9 @@ function printSummary(results) {
         else { console.log(`\n  ⚠️  ${r.url}`); issues.forEach(i => console.log(`     • ${i}`)); }
     }
 
+    const ai = AI_ENABLED ? '✅ ON — Gemini 2.5 Flash-Lite (free)' : '⚠️  OFF — set GEMINI_API_KEY in .env';
     console.log('\n  ────────────────────────────────────────────────────');
-    console.log(`  AI Detection    : ${AI_ENABLED ? '✅ ON — 1 call/page (was 6)' : '⚠️  OFF — set ANTHROPIC_API_KEY'}`);
+    console.log(`  AI              : ${ai}`);
     console.log(`  Pages audited   : ${t.pages}`);
     console.log(`  HTTP errors     : ${t.httpErrors}`);
     console.log(`  Blank screens   : ${t.blankScreens}`);
@@ -243,7 +244,7 @@ async function main(inputUrl) {
     console.log('║               🔍  WEB AUDIT STARTING                  ║');
     console.log('╚════════════════════════════════════════════════════════╝');
     console.log(`\n  🌐 URL    : ${inputUrl}`);
-    console.log(`  🤖 AI     : ${AI_ENABLED ? 'ON — 1 batched call/page' : 'OFF — set ANTHROPIC_API_KEY'}`);
+    console.log(`  🤖 AI     : ${AI_ENABLED ? 'ON — 1 batched call/page' : 'OFF — set GEMINI_API_KEY in .env'}`);
     console.log(`  ⚡ Concur : ${CONCURRENCY} pages at a time`);
 
     let urls = [];

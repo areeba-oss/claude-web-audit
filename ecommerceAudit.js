@@ -28,11 +28,11 @@ async function ecommerceAudit(browser, page, url, aiResult) {
     const aiProductLinks = ai.productLinks || [];
 
     // Get candidate links from existing page DOM (already loaded)
-    const domLinks = await page.evaluate(({origin, currentUrl}) =>
+    const domLinks = await page.evaluate((origin) =>
         Array.from(document.querySelectorAll('a[href]'))
             .map(a => a.href)
-            .filter(h => h.startsWith(origin) && h !== currentUrl),
-        {origin, currentUrl}
+            .filter(h => h.startsWith(origin) && h !== location.href),
+        origin
     );
 
     const candidates = [...new Set([...aiProductLinks, ...domLinks])];
