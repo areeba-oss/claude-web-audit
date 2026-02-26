@@ -8,17 +8,24 @@
       "blankScreen": false,
       "aiHealthScore": "good",
       "aiHealthSummary": "HTTP 200",
-      "significantErrors": [],
+      "significantErrors": [
+        "Error: <svg> attribute width: Expected length, \"auto\"."
+      ],
       "significantWarnings": [],
       "criticalFailedReqs": [],
       "ignoredNoise": [],
-      "consoleErrorCount": 0,
-      "significantErrorCount": 0,
-      "failedRequestCount": 5,
+      "consoleErrorCount": 1,
+      "significantErrorCount": 1,
+      "failedRequestCount": 24,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/",
       "headerFound": true,
       "headerVisible": true,
@@ -41,8 +48,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
@@ -53,13 +60,98 @@
         }
       }
     },
-    "navigation": {
+    "forms": {
+      "url": "https://practice.expandtesting.com/",
+      "isEcommerce": false,
+      "ecommerceType": "none",
+      "ecommerceConfidence": "low",
+      "ecommerceSignals": [],
+      "reasoning": "ANTHROPIC_API_KEY not set",
+      "productLinksFound": 0,
+      "productPageOpened": false,
+      "addToCartWorked": false,
+      "cartPageLoaded": false,
+      "checkoutAccessible": false,
+      "detectionMethod": "fallback",
+      "notes": [
+        "Not ecommerce: ANTHROPIC_API_KEY not set"
+      ]
+    },
+    "ecommerce": {
+      "url": "https://practice.expandtesting.com/",
+      "firstContentfulPaint": 1176,
+      "domContentLoaded": 1574,
+      "totalLoadTime": 5904,
+      "timeToFirstByte": 332,
+      "resourceSummary": {
+        "link": {
+          "count": 4,
+          "totalMs": 1714,
+          "totalKB": 37
+        },
+        "script": {
+          "count": 19,
+          "totalMs": 8399,
+          "totalKB": 487
+        },
+        "img": {
+          "count": 2,
+          "totalMs": 1139,
+          "totalKB": 1
+        },
+        "fetch": {
+          "count": 6,
+          "totalMs": 1237,
+          "totalKB": 0
+        },
+        "iframe": {
+          "count": 14,
+          "totalMs": 5027,
+          "totalKB": 233
+        },
+        "xmlhttprequest": {
+          "count": 17,
+          "totalMs": 7189,
+          "totalKB": 14
+        }
+      },
+      "slowResources": [
+        {
+          "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+          "type": "script",
+          "durationMs": 1176,
+          "sizeKB": null
+        },
+        {
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133561&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2F&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133561491&bpp=7&bdt=1012&idt=248&shv=r20260224&mjsv=m202602230101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=5100413197455&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378429%2C95381340%2C95382852%2C95383859%2C31096880%2C95344791%2C95381977&oid=2&pvsid=1625407385320144&tmod=1177963916&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=284",
+          "type": "iframe",
+          "durationMs": 1040,
+          "sizeKB": 104
+        }
+      ],
+      "largeImages": [
+        {
+          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+          "type": "img",
+          "durationMs": 837,
+          "sizeKB": 1
+        }
+      ],
+      "performanceScore": "good",
+      "fcpAssessment": "unknown",
+      "ttfbAssessment": "unknown",
+      "topIssues": [],
+      "recommendations": [],
+      "userImpact": null,
+      "detectionMethod": "fallback"
+    },
+    "performance": {
       "url": "https://practice.expandtesting.com/",
       "navigationHealth": "issues",
       "severity": "low",
       "metrics": {
-        "totalLinks": 109,
-        "internalLinks": 96,
+        "totalLinks": 108,
+        "internalLinks": 95,
         "externalLinks": 13,
         "brokenLinks": 0,
         "protectedLinks": 3
@@ -108,90 +200,6 @@
         "https://practice.expandtesting.com/digest-auth"
       ],
       "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
-      "url": "https://practice.expandtesting.com/",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
-      "url": "https://practice.expandtesting.com/",
-      "isEcommerce": false,
-      "ecommerceType": "none",
-      "ecommerceConfidence": "low",
-      "ecommerceSignals": [],
-      "reasoning": "ANTHROPIC_API_KEY not set",
-      "productLinksFound": 0,
-      "productPageOpened": false,
-      "addToCartWorked": false,
-      "cartPageLoaded": false,
-      "checkoutAccessible": false,
-      "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
-    },
-    "performance": {
-      "url": "https://practice.expandtesting.com/",
-      "firstContentfulPaint": 1216,
-      "domContentLoaded": 1450,
-      "totalLoadTime": 4265,
-      "timeToFirstByte": 348,
-      "resourceSummary": {
-        "link": {
-          "count": 5,
-          "totalMs": 2087,
-          "totalKB": 39
-        },
-        "script": {
-          "count": 18,
-          "totalMs": 8422,
-          "totalKB": 863
-        },
-        "img": {
-          "count": 2,
-          "totalMs": 1089,
-          "totalKB": 1
-        },
-        "fetch": {
-          "count": 5,
-          "totalMs": 1857,
-          "totalKB": 0
-        },
-        "iframe": {
-          "count": 14,
-          "totalMs": 4816,
-          "totalKB": 63
-        },
-        "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 5734,
-          "totalKB": 16
-        }
-      },
-      "slowResources": [
-        {
-          "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
-          "type": "script",
-          "durationMs": 1038,
-          "sizeKB": null
-        }
-      ],
-      "largeImages": [
-        {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 736,
-          "sizeKB": 1
-        }
-      ],
-      "performanceScore": "good",
-      "fcpAssessment": "unknown",
-      "ttfbAssessment": "unknown",
-      "topIssues": [],
-      "recommendations": [],
-      "userImpact": null,
-      "detectionMethod": "fallback"
     }
   },
   {
@@ -209,11 +217,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 5,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/tips",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/tips",
       "headerFound": true,
       "headerVisible": true,
@@ -236,8 +249,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
@@ -248,28 +261,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/tips",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 24,
-        "internalLinks": 20,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/tips",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/tips",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -286,41 +278,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/tips",
-      "firstContentfulPaint": 1288,
-      "domContentLoaded": 1358,
-      "totalLoadTime": 4248,
-      "timeToFirstByte": 335,
+      "firstContentfulPaint": 1188,
+      "domContentLoaded": 1531,
+      "totalLoadTime": 5600,
+      "timeToFirstByte": 542,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2236,
+          "totalMs": 2433,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8454,
-          "totalKB": 384
+          "totalMs": 9059,
+          "totalKB": 400
         },
         "img": {
-          "count": 8,
-          "totalMs": 2299,
+          "count": 3,
+          "totalMs": 1168,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1152,
+          "count": 5,
+          "totalMs": 1175,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2606,
-          "totalKB": 31
+          "totalMs": 3827,
+          "totalKB": 34
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5504,
+          "totalMs": 7341,
           "totalKB": 15
         }
       },
@@ -328,21 +320,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1263,
+          "durationMs": 1020,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+          "url": "https://fundingchoicesmessages.google.com/i/ca-pub-1056034821646296?href=https%3A%2F%2Fpractice.expandtesting.com%2Ftips&ers=2",
           "type": "script",
-          "durationMs": 1041,
-          "sizeKB": 63
+          "durationMs": 1385,
+          "sizeKB": 69
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 923,
+          "durationMs": 718,
           "sizeKB": 1
         }
       ],
@@ -353,6 +345,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/tips",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 24,
+        "internalLinks": 20,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -376,6 +384,11 @@
     },
     "uiLayout": {
       "url": "https://practice.expandtesting.com/test-cases",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
+      "url": "https://practice.expandtesting.com/test-cases",
       "headerFound": true,
       "headerVisible": true,
       "footerFound": true,
@@ -409,28 +422,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/test-cases",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 17,
-        "internalLinks": 13,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/test-cases",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/test-cases",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -447,41 +439,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/test-cases",
       "firstContentfulPaint": 1380,
-      "domContentLoaded": 1539,
-      "totalLoadTime": 3972,
-      "timeToFirstByte": 322,
+      "domContentLoaded": 1456,
+      "totalLoadTime": 5036,
+      "timeToFirstByte": 325,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2064,
+          "totalMs": 2052,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 7954,
-          "totalKB": 447
+          "totalMs": 8476,
+          "totalKB": 413
         },
         "img": {
-          "count": 1,
-          "totalMs": 910,
+          "count": 2,
+          "totalMs": 1157,
           "totalKB": 1
         },
         "fetch": {
           "count": 3,
-          "totalMs": 1437,
+          "totalMs": 1332,
           "totalKB": 0
         },
         "iframe": {
-          "count": 7,
-          "totalMs": 2047,
-          "totalKB": 28
+          "count": 9,
+          "totalMs": 4483,
+          "totalKB": 38
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5108,
+          "totalMs": 7914,
           "totalKB": 15
         }
       },
@@ -489,15 +481,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1150,
+          "durationMs": 1174,
           "sizeKB": null
+        },
+        {
+          "url": "https://fundingchoicesmessages.google.com/i/ca-pub-1056034821646296?href=https%3A%2F%2Fpractice.expandtesting.com%2Ftest-cases&ers=2",
+          "type": "script",
+          "durationMs": 1280,
+          "sizeKB": 69
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 910,
+          "durationMs": 859,
           "sizeKB": 1
         }
       ],
@@ -508,6 +506,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/test-cases",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 17,
+        "internalLinks": 13,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -530,6 +544,24 @@
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/notes/api/api-docs",
+      "formCount": 1,
+      "forms": [
+        {
+          "index": 0,
+          "fieldCount": 1,
+          "purpose": "unknown",
+          "criticalMissingValidation": [],
+          "isCritical": true,
+          "hasSubmitBtn": true,
+          "hasEmailField": false,
+          "hasRequiredFields": false,
+          "browserValidationActive": false,
+          "detectionMethod": "fallback"
+        }
+      ]
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/notes/api/api-docs",
       "headerFound": false,
       "headerVisible": false,
@@ -564,41 +596,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/notes/api/api-docs",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 25,
-        "internalLinks": 22,
-        "externalLinks": 3,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/notes/api/api-docs",
-      "formCount": 1,
-      "forms": [
-        {
-          "index": 0,
-          "fieldCount": 1,
-          "purpose": "unknown",
-          "criticalMissingValidation": [],
-          "isCritical": true,
-          "hasSubmitBtn": true,
-          "hasEmailField": false,
-          "hasRequiredFields": false,
-          "browserValidationActive": false,
-          "detectionMethod": "fallback"
-        }
-      ]
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/notes/api/api-docs",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -615,64 +613,52 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/notes/api/api-docs",
-      "firstContentfulPaint": 4032,
-      "domContentLoaded": 3600,
-      "totalLoadTime": 3979,
-      "timeToFirstByte": 322,
+      "firstContentfulPaint": 3068,
+      "domContentLoaded": 2550,
+      "totalLoadTime": 3038,
+      "timeToFirstByte": 330,
       "resourceSummary": {
         "link": {
           "count": 1,
-          "totalMs": 1760,
-          "totalKB": 31
+          "totalMs": 743,
+          "totalKB": 29
         },
         "script": {
           "count": 5,
-          "totalMs": 4827,
-          "totalKB": 577
+          "totalMs": 3497,
+          "totalKB": 570
         },
         "xmlhttprequest": {
           "count": 6,
-          "totalMs": 2093,
-          "totalKB": 1
+          "totalMs": 2052,
+          "totalKB": 2
         },
         "fetch": {
           "count": 1,
-          "totalMs": 361,
+          "totalMs": 404,
           "totalKB": 4
         },
         "img": {
           "count": 1,
-          "totalMs": 733,
+          "totalMs": 900,
           "totalKB": 0
         }
       },
       "slowResources": [
         {
-          "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui.css",
-          "type": "link",
-          "durationMs": 1760,
-          "sizeKB": 31
-        },
-        {
           "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui-bundle.js",
           "type": "script",
-          "durationMs": 2059,
-          "sizeKB": 473
-        },
-        {
-          "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui-standalone-preset.js",
-          "type": "script",
-          "durationMs": 1761,
-          "sizeKB": 88
+          "durationMs": 1325,
+          "sizeKB": 467
         }
       ],
       "largeImages": [
         {
           "url": "https://validator.swagger.io/validator?url=https%3A%2F%2Fpractice.expandtesting.com%2Fnotes%2Fapi%2Fswagger.json",
           "type": "img",
-          "durationMs": 733,
+          "durationMs": 900,
           "sizeKB": null
         }
       ],
@@ -683,6 +669,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/notes/api/api-docs",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 25,
+        "internalLinks": 22,
+        "externalLinks": 3,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -700,11 +702,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/about",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/about",
       "headerFound": true,
       "headerVisible": true,
@@ -727,8 +734,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
@@ -739,28 +746,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/about",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 11,
-        "externalLinks": 5,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/about",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/about",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -777,63 +763,75 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/about",
-      "firstContentfulPaint": 1316,
-      "domContentLoaded": 1423,
-      "totalLoadTime": 4172,
-      "timeToFirstByte": 339,
+      "firstContentfulPaint": 1148,
+      "domContentLoaded": 1679,
+      "totalLoadTime": 3313,
+      "timeToFirstByte": 326,
       "resourceSummary": {
         "link": {
-          "count": 4,
-          "totalMs": 1911,
-          "totalKB": 37
+          "count": 5,
+          "totalMs": 2034,
+          "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8747,
-          "totalKB": 850
+          "totalMs": 8254,
+          "totalKB": 447
         },
         "img": {
-          "count": 2,
-          "totalMs": 1299,
+          "count": 7,
+          "totalMs": 2021,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1013,
+          "count": 2,
+          "totalMs": 690,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2566,
-          "totalKB": 34
+          "totalMs": 2870,
+          "totalKB": 35
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4468,
-          "totalKB": 14
+          "count": 18,
+          "totalMs": 6598,
+          "totalKB": 16
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1287,
+          "durationMs": 1191,
           "sizeKB": null
         },
         {
           "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
           "type": "script",
-          "durationMs": 1159,
+          "durationMs": 1013,
           "sizeKB": 63
+        },
+        {
+          "url": "https://practice.expandtesting.com/script/script.js",
+          "type": "script",
+          "durationMs": 1133,
+          "sizeKB": 1
+        },
+        {
+          "url": "https://fundingchoicesmessages.google.com/el/AGSKWxVaCZPa5iPJeZF-D-5cUCuBWm3j9qweGo-j9dMxyjwEXraqssgjoshqRcIKIsWPoCAED2qHQ0-i56kiTReixqhFmI1jB5Q6bZuf5rhEF284mmmWrxayWmCo18XRRRbZ6bt0c_fNcg==",
+          "type": "xmlhttprequest",
+          "durationMs": 1398,
+          "sizeKB": null
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 956,
+          "durationMs": 883,
           "sizeKB": 1
         }
       ],
@@ -844,6 +842,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/about",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 17,
+        "internalLinks": 12,
+        "externalLinks": 5,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -861,62 +875,11 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 3,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
-      "url": "https://practice.expandtesting.com/xpath-css-tester",
-      "headerFound": true,
-      "headerVisible": true,
-      "footerFound": true,
-      "footerVisible": true,
-      "mainCTAVisible": false,
-      "ctaCount": 0,
-      "ctaTexts": [],
-      "ctaTypes": [],
-      "ctaDetectionMethod": "fallback",
-      "logoDetected": true,
-      "logoVisible": true,
-      "logoLinksHome": true,
-      "responsiveness": {
-        "mobile": {
-          "viewportWidth": 375,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 375
-        },
-        "tablet": {
-          "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 768
-        },
-        "desktop": {
-          "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 1440
-        }
-      }
-    },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/xpath-css-tester",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 12,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
       "url": "https://practice.expandtesting.com/xpath-css-tester",
       "formCount": 1,
       "forms": [
@@ -934,7 +897,42 @@
         }
       ]
     },
-    "ecommerce": {
+    "navigation": {
+      "url": "https://practice.expandtesting.com/xpath-css-tester",
+      "headerFound": true,
+      "headerVisible": true,
+      "footerFound": true,
+      "footerVisible": true,
+      "mainCTAVisible": false,
+      "ctaCount": 0,
+      "ctaTexts": [],
+      "ctaTypes": [],
+      "ctaDetectionMethod": "fallback",
+      "logoDetected": true,
+      "logoVisible": true,
+      "logoLinksHome": true,
+      "responsiveness": {
+        "mobile": {
+          "viewportWidth": 375,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 375
+        },
+        "tablet": {
+          "viewportWidth": 768,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 768
+        },
+        "desktop": {
+          "viewportWidth": 1440,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 1440
+        }
+      }
+    },
+    "forms": {
       "url": "https://practice.expandtesting.com/xpath-css-tester",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -951,41 +949,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/xpath-css-tester",
-      "firstContentfulPaint": 1036,
-      "domContentLoaded": 1468,
-      "totalLoadTime": 3478,
-      "timeToFirstByte": 327,
+      "firstContentfulPaint": 1120,
+      "domContentLoaded": 1721,
+      "totalLoadTime": 3785,
+      "timeToFirstByte": 325,
       "resourceSummary": {
         "link": {
           "count": 6,
-          "totalMs": 2072,
+          "totalMs": 1898,
           "totalKB": 40
         },
         "script": {
           "count": 18,
-          "totalMs": 9180,
-          "totalKB": 609
+          "totalMs": 10321,
+          "totalKB": 612
         },
         "img": {
-          "count": 2,
-          "totalMs": 1138,
+          "count": 8,
+          "totalMs": 2319,
           "totalKB": 1
+        },
+        "fetch": {
+          "count": 3,
+          "totalMs": 937,
+          "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2418,
-          "totalKB": 30
-        },
-        "fetch": {
-          "count": 4,
-          "totalMs": 1094,
-          "totalKB": 0
+          "totalMs": 2882,
+          "totalKB": 34
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4642,
+          "count": 18,
+          "totalMs": 5097,
           "totalKB": 15
         }
       },
@@ -993,15 +991,39 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1356,
+          "durationMs": 1145,
           "sizeKB": null
+        },
+        {
+          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+          "type": "img",
+          "durationMs": 1138,
+          "sizeKB": 1
+        },
+        {
+          "url": "https://practice.expandtesting.com/assets/plugins/xpath-css/xc-selector.min.js",
+          "type": "script",
+          "durationMs": 1124,
+          "sizeKB": 141
+        },
+        {
+          "url": "https://practice.expandtesting.com/assets/plugins/back-to-top/back-to-top.min.js",
+          "type": "script",
+          "durationMs": 1125,
+          "sizeKB": 2
+        },
+        {
+          "url": "https://practice.expandtesting.com/script/script.js",
+          "type": "script",
+          "durationMs": 1133,
+          "sizeKB": 1
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 813,
+          "durationMs": 1138,
           "sizeKB": 1
         }
       ],
@@ -1012,6 +1034,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/xpath-css-tester",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1029,11 +1067,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 23,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/inputs",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/inputs",
       "headerFound": true,
       "headerVisible": true,
@@ -1056,8 +1099,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
@@ -1068,28 +1111,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/inputs",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/inputs",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/inputs",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1106,57 +1128,63 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/inputs",
-      "firstContentfulPaint": 1168,
-      "domContentLoaded": 1307,
-      "totalLoadTime": 3616,
-      "timeToFirstByte": 326,
+      "firstContentfulPaint": 1124,
+      "domContentLoaded": 1354,
+      "totalLoadTime": 5980,
+      "timeToFirstByte": 333,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1894,
+          "totalMs": 1289,
           "totalKB": 39
         },
         "script": {
-          "count": 17,
-          "totalMs": 7335,
-          "totalKB": 409
+          "count": 18,
+          "totalMs": 8217,
+          "totalKB": 539
         },
         "img": {
           "count": 2,
-          "totalMs": 1220,
+          "totalMs": 1156,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1113,
+          "count": 5,
+          "totalMs": 1087,
           "totalKB": 0
         },
         "iframe": {
-          "count": 9,
-          "totalMs": 3276,
-          "totalKB": 41
+          "count": 10,
+          "totalMs": 3705,
+          "totalKB": 189
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 4797,
-          "totalKB": 15
+          "totalMs": 4395,
+          "totalKB": 14
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1169,
+          "durationMs": 1172,
           "sizeKB": null
+        },
+        {
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133652&plat=3%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Finputs&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133652247&bpp=6&bdt=1068&idt=663&shv=r20260224&mjsv=m202602190101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=8180953883011&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378425%2C95382852%2C95383702%2C95383860%2C95383667&oid=2&pvsid=6235606891645239&tmod=1017208845&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&plas=250x567_r&bz=1&ifi=1&uci=a!1&fsb=1&dtd=698",
+          "type": "iframe",
+          "durationMs": 1296,
+          "sizeKB": 123
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 881,
+          "durationMs": 828,
           "sizeKB": 1
         }
       ],
@@ -1167,6 +1195,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/inputs",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1184,62 +1228,11 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 5,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
-      "url": "https://practice.expandtesting.com/login",
-      "headerFound": true,
-      "headerVisible": true,
-      "footerFound": true,
-      "footerVisible": true,
-      "mainCTAVisible": false,
-      "ctaCount": 0,
-      "ctaTexts": [],
-      "ctaTypes": [],
-      "ctaDetectionMethod": "fallback",
-      "logoDetected": true,
-      "logoVisible": true,
-      "logoLinksHome": true,
-      "responsiveness": {
-        "mobile": {
-          "viewportWidth": 375,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 375
-        },
-        "tablet": {
-          "viewportWidth": 768,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 768
-        },
-        "desktop": {
-          "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 1440
-        }
-      }
-    },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/login",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 17,
-        "internalLinks": 13,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
       "url": "https://practice.expandtesting.com/login",
       "formCount": 1,
       "forms": [
@@ -1257,7 +1250,42 @@
         }
       ]
     },
-    "ecommerce": {
+    "navigation": {
+      "url": "https://practice.expandtesting.com/login",
+      "headerFound": true,
+      "headerVisible": true,
+      "footerFound": true,
+      "footerVisible": true,
+      "mainCTAVisible": false,
+      "ctaCount": 0,
+      "ctaTexts": [],
+      "ctaTypes": [],
+      "ctaDetectionMethod": "fallback",
+      "logoDetected": true,
+      "logoVisible": true,
+      "logoLinksHome": true,
+      "responsiveness": {
+        "mobile": {
+          "viewportWidth": 375,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 375
+        },
+        "tablet": {
+          "viewportWidth": 768,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 768
+        },
+        "desktop": {
+          "viewportWidth": 1440,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 1440
+        }
+      }
+    },
+    "forms": {
       "url": "https://practice.expandtesting.com/login",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1274,41 +1302,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/login",
-      "firstContentfulPaint": 1216,
-      "domContentLoaded": 1421,
-      "totalLoadTime": 4097,
-      "timeToFirstByte": 338,
+      "firstContentfulPaint": 1128,
+      "domContentLoaded": 1414,
+      "totalLoadTime": 4120,
+      "timeToFirstByte": 332,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1643,
+          "totalMs": 1609,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8108,
-          "totalKB": 863
+          "totalMs": 8376,
+          "totalKB": 396
         },
         "img": {
           "count": 3,
-          "totalMs": 1708,
+          "totalMs": 1728,
           "totalKB": 60
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 1484,
+          "count": 5,
+          "totalMs": 1229,
           "totalKB": 0
         },
         "iframe": {
-          "count": 9,
-          "totalMs": 4178,
-          "totalKB": 36
+          "count": 10,
+          "totalMs": 3369,
+          "totalKB": 38
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 4458,
+          "totalMs": 8381,
           "totalKB": 14
         }
       },
@@ -1316,21 +1344,33 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1182,
+          "durationMs": 1171,
           "sizeKB": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+          "type": "script",
+          "durationMs": 1034,
+          "sizeKB": 63
+        },
+        {
+          "url": "https://practice.expandtesting.com/socket.io/?EIO=4&transport=polling&t=PoRPQJo&sid=L4d3VJJVtre3GbIkASfR",
+          "type": "xmlhttprequest",
+          "durationMs": 1245,
+          "sizeKB": 0
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 870,
+          "durationMs": 842,
           "sizeKB": 1
         },
         {
           "url": "https://practice.expandtesting.com/img/auth-login.png",
           "type": "img",
-          "durationMs": 511,
+          "durationMs": 558,
           "sizeKB": 59
         }
       ],
@@ -1341,6 +1381,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/login",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 17,
+        "internalLinks": 13,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1358,62 +1414,11 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
-      "url": "https://practice.expandtesting.com/register",
-      "headerFound": true,
-      "headerVisible": true,
-      "footerFound": true,
-      "footerVisible": true,
-      "mainCTAVisible": false,
-      "ctaCount": 0,
-      "ctaTexts": [],
-      "ctaTypes": [],
-      "ctaDetectionMethod": "fallback",
-      "logoDetected": true,
-      "logoVisible": true,
-      "logoLinksHome": true,
-      "responsiveness": {
-        "mobile": {
-          "viewportWidth": 375,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 375
-        },
-        "tablet": {
-          "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 768
-        },
-        "desktop": {
-          "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 1440
-        }
-      }
-    },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/register",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
       "url": "https://practice.expandtesting.com/register",
       "formCount": 1,
       "forms": [
@@ -1431,7 +1436,42 @@
         }
       ]
     },
-    "ecommerce": {
+    "navigation": {
+      "url": "https://practice.expandtesting.com/register",
+      "headerFound": true,
+      "headerVisible": true,
+      "footerFound": true,
+      "footerVisible": true,
+      "mainCTAVisible": false,
+      "ctaCount": 0,
+      "ctaTexts": [],
+      "ctaTypes": [],
+      "ctaDetectionMethod": "fallback",
+      "logoDetected": true,
+      "logoVisible": true,
+      "logoLinksHome": true,
+      "responsiveness": {
+        "mobile": {
+          "viewportWidth": 375,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 375
+        },
+        "tablet": {
+          "viewportWidth": 768,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 768
+        },
+        "desktop": {
+          "viewportWidth": 1440,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 1440
+        }
+      }
+    },
+    "forms": {
       "url": "https://practice.expandtesting.com/register",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1448,41 +1488,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/register",
-      "firstContentfulPaint": 1200,
-      "domContentLoaded": 1494,
-      "totalLoadTime": 3645,
-      "timeToFirstByte": 355,
+      "firstContentfulPaint": 944,
+      "domContentLoaded": 1237,
+      "totalLoadTime": 3518,
+      "timeToFirstByte": 327,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1894,
+          "totalMs": 1588,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 7856,
-          "totalKB": 384
+          "totalMs": 6896,
+          "totalKB": 408
         },
         "img": {
           "count": 2,
-          "totalMs": 1237,
+          "totalMs": 1025,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1250,
+          "count": 2,
+          "totalMs": 724,
           "totalKB": 0
         },
         "iframe": {
-          "count": 7,
-          "totalMs": 2467,
-          "totalKB": 29
+          "count": 9,
+          "totalMs": 3625,
+          "totalKB": 33
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 4482,
+          "totalMs": 5069,
           "totalKB": 15
         }
       },
@@ -1490,21 +1530,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1308,
+          "durationMs": 1051,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1054,
-          "sizeKB": 63
+          "url": "https://www.google.com/recaptcha/api2/aframe",
+          "type": "iframe",
+          "durationMs": 1374,
+          "sizeKB": null
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 899,
+          "durationMs": 706,
           "sizeKB": 1
         }
       ],
@@ -1515,6 +1555,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/register",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1532,11 +1588,29 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 18,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/forgot-password",
+      "formCount": 1,
+      "forms": [
+        {
+          "index": 0,
+          "fieldCount": 1,
+          "purpose": "unknown",
+          "criticalMissingValidation": [],
+          "isCritical": true,
+          "hasSubmitBtn": true,
+          "hasEmailField": true,
+          "hasRequiredFields": true,
+          "browserValidationActive": true,
+          "detectionMethod": "fallback"
+        }
+      ]
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/forgot-password",
       "headerFound": true,
       "headerVisible": true,
@@ -1571,41 +1645,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/forgot-password",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/forgot-password",
-      "formCount": 1,
-      "forms": [
-        {
-          "index": 0,
-          "fieldCount": 1,
-          "purpose": "unknown",
-          "criticalMissingValidation": [],
-          "isCritical": true,
-          "hasSubmitBtn": true,
-          "hasEmailField": true,
-          "hasRequiredFields": true,
-          "browserValidationActive": true,
-          "detectionMethod": "fallback"
-        }
-      ]
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/forgot-password",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1622,75 +1662,69 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/forgot-password",
-      "firstContentfulPaint": 1364,
-      "domContentLoaded": 1724,
-      "totalLoadTime": 4636,
-      "timeToFirstByte": 324,
+      "firstContentfulPaint": 1068,
+      "domContentLoaded": 1430,
+      "totalLoadTime": 6151,
+      "timeToFirstByte": 337,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2300,
+          "totalMs": 1959,
           "totalKB": 39
         },
         "script": {
-          "count": 18,
-          "totalMs": 9783,
-          "totalKB": 863
+          "count": 19,
+          "totalMs": 9650,
+          "totalKB": 614
         },
         "img": {
           "count": 2,
-          "totalMs": 1455,
+          "totalMs": 1104,
           "totalKB": 1
         },
         "fetch": {
           "count": 4,
-          "totalMs": 1374,
+          "totalMs": 942,
           "totalKB": 0
         },
         "iframe": {
-          "count": 8,
-          "totalMs": 3461,
-          "totalKB": 32
+          "count": 10,
+          "totalMs": 4378,
+          "totalKB": 176
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 4964,
-          "totalKB": 14
+          "totalMs": 5263,
+          "totalKB": 15
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1498,
+          "durationMs": 1171,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1343,
-          "sizeKB": 63
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133687&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Fforgot-password&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133686840&bpp=7&bdt=939&idt=360&shv=r20260224&mjsv=m202602190101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=6908193133494&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378429%2C95381340%2C95382852%2C95383702%2C95383860%2C31096879%2C95344787%2C95383668&oid=2&pvsid=1830285515115510&tmod=1784464342&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=389",
+          "type": "iframe",
+          "durationMs": 1238,
+          "sizeKB": 106
         },
         {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1123,
-          "sizeKB": 1
-        },
-        {
-          "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+          "url": "https://fundingchoicesmessages.google.com/i/ca-pub-1056034821646296?href=https%3A%2F%2Fpractice.expandtesting.com%2Fforgot-password&ers=2",
           "type": "script",
-          "durationMs": 1109,
-          "sizeKB": 14
+          "durationMs": 1367,
+          "sizeKB": 69
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1123,
+          "durationMs": 780,
           "sizeKB": 1
         }
       ],
@@ -1701,6 +1735,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/forgot-password",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1718,62 +1768,11 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
-      "url": "https://practice.expandtesting.com/otp-login",
-      "headerFound": true,
-      "headerVisible": true,
-      "footerFound": true,
-      "footerVisible": true,
-      "mainCTAVisible": false,
-      "ctaCount": 0,
-      "ctaTexts": [],
-      "ctaTypes": [],
-      "ctaDetectionMethod": "fallback",
-      "logoDetected": true,
-      "logoVisible": true,
-      "logoLinksHome": true,
-      "responsiveness": {
-        "mobile": {
-          "viewportWidth": 375,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 375
-        },
-        "tablet": {
-          "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 768
-        },
-        "desktop": {
-          "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 1440
-        }
-      }
-    },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/otp-login",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
       "url": "https://practice.expandtesting.com/otp-login",
       "formCount": 1,
       "forms": [
@@ -1791,7 +1790,42 @@
         }
       ]
     },
-    "ecommerce": {
+    "navigation": {
+      "url": "https://practice.expandtesting.com/otp-login",
+      "headerFound": true,
+      "headerVisible": true,
+      "footerFound": true,
+      "footerVisible": true,
+      "mainCTAVisible": false,
+      "ctaCount": 0,
+      "ctaTexts": [],
+      "ctaTypes": [],
+      "ctaDetectionMethod": "fallback",
+      "logoDetected": true,
+      "logoVisible": true,
+      "logoLinksHome": true,
+      "responsiveness": {
+        "mobile": {
+          "viewportWidth": 375,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 375
+        },
+        "tablet": {
+          "viewportWidth": 768,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 768
+        },
+        "desktop": {
+          "viewportWidth": 1440,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 1440
+        }
+      }
+    },
+    "forms": {
       "url": "https://practice.expandtesting.com/otp-login",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1808,75 +1842,69 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/otp-login",
-      "firstContentfulPaint": 1312,
-      "domContentLoaded": 1663,
-      "totalLoadTime": 4615,
-      "timeToFirstByte": 329,
+      "firstContentfulPaint": 1108,
+      "domContentLoaded": 1568,
+      "totalLoadTime": 3634,
+      "timeToFirstByte": 324,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2442,
+          "totalMs": 1922,
           "totalKB": 39
         },
         "script": {
           "count": 18,
-          "totalMs": 9951,
-          "totalKB": 863
+          "totalMs": 8791,
+          "totalKB": 472
         },
         "img": {
-          "count": 7,
-          "totalMs": 2618,
+          "count": 2,
+          "totalMs": 1211,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1304,
+          "count": 2,
+          "totalMs": 716,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2776,
+          "totalMs": 2481,
           "totalKB": 34
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5314,
+          "totalMs": 6443,
           "totalKB": 14
         }
       },
       "slowResources": [
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1218,
-          "sizeKB": 63
-        },
-        {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1363,
+          "durationMs": 1167,
           "sizeKB": null
-        },
-        {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1072,
-          "sizeKB": 1
         },
         {
           "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
           "type": "script",
-          "durationMs": 1068,
+          "durationMs": 1001,
           "sizeKB": 14
+        },
+        {
+          "url": "https://fundingchoicesmessages.google.com/el/AGSKWxV5OhVhdsLm-E-bTvqJq2qYhktGoNK5Jg3Y-N8p-WYV557Y0z-htclzZAK3fH3qyKxK2Py5uWEhRQJz3xsXanptCjmw9FInaxIeQ7RgGE2bk9bTRtDbY8e_jdkg3djfm-m4FxLVVw==",
+          "type": "xmlhttprequest",
+          "durationMs": 1007,
+          "sizeKB": null
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1072,
+          "durationMs": 889,
           "sizeKB": 1
         }
       ],
@@ -1887,6 +1915,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/otp-login",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -1904,11 +1948,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 3,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/dynamic-table",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/dynamic-table",
       "headerFound": true,
       "headerVisible": true,
@@ -1943,28 +1992,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/dynamic-table",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/dynamic-table",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-table",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -1981,41 +2009,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-table",
-      "firstContentfulPaint": 1232,
-      "domContentLoaded": 1570,
-      "totalLoadTime": 4748,
-      "timeToFirstByte": 323,
+      "firstContentfulPaint": 1116,
+      "domContentLoaded": 1278,
+      "totalLoadTime": 4556,
+      "timeToFirstByte": 328,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2038,
+          "totalMs": 2459,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8146,
-          "totalKB": 862
+          "totalMs": 8501,
+          "totalKB": 396
         },
         "img": {
           "count": 2,
-          "totalMs": 1323,
+          "totalMs": 1185,
           "totalKB": 1
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 1744,
+          "count": 3,
+          "totalMs": 820,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 3961,
-          "totalKB": 35
+          "totalMs": 3993,
+          "totalKB": 33
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5545,
+          "totalMs": 4420,
           "totalKB": 14
         }
       },
@@ -2023,27 +2051,27 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1156,
+          "durationMs": 1175,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1006,
-          "sizeKB": 63
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&h=600&slotname=2406335743&adk=1001816293&adf=2895879612&pi=t.ma~as.2406335743&w=192&fwrn=4&fwrnh=100&lmt=1772133687&rafmt=1&format=192x600&url=https%3A%2F%2Fpractice.expandtesting.com%2Fdynamic-table&fwr=0&fwrattr=true&rpe=1&resp_fmts=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133686940&bpp=1&bdt=1037&idt=698&shv=r20260224&mjsv=m202602190101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&prev_fmts=0x0%2C1200x280%2C191x600&nras=1&correlator=649234704294&frm=20&pv=1&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=1023&ady=529&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378429%2C95381339%2C95382853%2C95383860%2C42533294&oid=2&pvsid=8555975991638177&tmod=235343183&uas=0&nvt=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7ClE%7C&abl=CS&pfx=0&fu=128&bc=31&bz=1&ifi=4&uci=a!4&fsb=1&dtd=701",
+          "type": "iframe",
+          "durationMs": 1668,
+          "sizeKB": 3
         },
         {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1004,
-          "sizeKB": 1
+          "url": "https://fundingchoicesmessages.google.com/i/ca-pub-1056034821646296?href=https%3A%2F%2Fpractice.expandtesting.com%2Fdynamic-table&ers=2",
+          "type": "script",
+          "durationMs": 1425,
+          "sizeKB": 69
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1004,
+          "durationMs": 856,
           "sizeKB": 1
         }
       ],
@@ -2054,6 +2082,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/dynamic-table",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2071,11 +2115,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 18,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/dynamic-pagination-table",
       "headerFound": true,
       "headerVisible": true,
@@ -2098,8 +2147,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
@@ -2110,28 +2159,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 12,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-pagination-table",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2148,75 +2176,63 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-pagination-table",
-      "firstContentfulPaint": 1296,
-      "domContentLoaded": 1604,
-      "totalLoadTime": 4446,
-      "timeToFirstByte": 336,
+      "firstContentfulPaint": 952,
+      "domContentLoaded": 1327,
+      "totalLoadTime": 6660,
+      "timeToFirstByte": 322,
       "resourceSummary": {
         "link": {
           "count": 6,
-          "totalMs": 2928,
+          "totalMs": 2526,
           "totalKB": 39
         },
         "script": {
-          "count": 20,
-          "totalMs": 12435,
-          "totalKB": 865
+          "count": 21,
+          "totalMs": 10232,
+          "totalKB": 552
         },
         "img": {
           "count": 2,
-          "totalMs": 1289,
+          "totalMs": 1041,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1182,
+          "count": 4,
+          "totalMs": 1557,
           "totalKB": 0
         },
         "iframe": {
-          "count": 6,
-          "totalMs": 1613,
-          "totalKB": 25
+          "count": 10,
+          "totalMs": 5253,
+          "totalKB": 180
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4811,
-          "totalKB": 14
+          "count": 18,
+          "totalMs": 5062,
+          "totalKB": 15
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1274,
+          "durationMs": 1030,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1077,
-          "sizeKB": 63
-        },
-        {
-          "url": "https://practice.expandtesting.com/assets/plugins/back-to-top/back-to-top.min.js",
-          "type": "script",
-          "durationMs": 1032,
-          "sizeKB": 2
-        },
-        {
-          "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
-          "type": "script",
-          "durationMs": 1028,
-          "sizeKB": 14
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133699&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Fdynamic-pagination-table&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133699154&bpp=6&bdt=1036&idt=364&shv=r20260224&mjsv=m202602230101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=451414675176&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=42532523%2C95378425%2C95381339%2C95382853%2C95383859%2C31096880%2C42533293%2C95344787&oid=2&pvsid=4153109502168559&tmod=1785897719&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=398",
+          "type": "iframe",
+          "durationMs": 1333,
+          "sizeKB": 107
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 965,
+          "durationMs": 715,
           "sizeKB": 1
         }
       ],
@@ -2227,6 +2243,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2244,11 +2276,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 24,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/locators",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/locators",
       "headerFound": true,
       "headerVisible": true,
@@ -2271,40 +2308,19 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 768
         },
         "desktop": {
           "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
+          "responsive": false,
+          "hasHorizontalScroll": true,
           "bodyWidth": 1440
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/locators",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 12,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/locators",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/locators",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2321,82 +2337,70 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/locators",
-      "firstContentfulPaint": 1464,
-      "domContentLoaded": 1675,
-      "totalLoadTime": 4087,
-      "timeToFirstByte": 338,
+      "firstContentfulPaint": 1000,
+      "domContentLoaded": 1313,
+      "totalLoadTime": 4133,
+      "timeToFirstByte": 328,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2026,
+          "totalMs": 1707,
           "totalKB": 39
         },
         "script": {
-          "count": 17,
-          "totalMs": 9899,
-          "totalKB": 384
+          "count": 18,
+          "totalMs": 8282,
+          "totalKB": 461
         },
         "img": {
           "count": 3,
-          "totalMs": 1943,
+          "totalMs": 1437,
           "totalKB": 4
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 1104,
+          "count": 6,
+          "totalMs": 1492,
           "totalKB": 0
         },
         "iframe": {
-          "count": 9,
-          "totalMs": 2793,
-          "totalKB": 39
+          "count": 12,
+          "totalMs": 6907,
+          "totalKB": 202
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4809,
-          "totalKB": 15
+          "count": 16,
+          "totalMs": 8067,
+          "totalKB": 14
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1535,
+          "durationMs": 1011,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1189,
-          "sizeKB": 63
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133699&plat=3%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Flocators&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133699003&bpp=6&bdt=860&idt=280&shv=r20260224&mjsv=m202602240101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=1141211245311&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378425%2C95381339%2C95382853%2C95383859%2C31096936&oid=2&pvsid=4087676333818252&tmod=877168089&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&plas=250x567_r&bz=1&ifi=1&uci=a!1&fsb=1&dtd=312",
+          "type": "iframe",
+          "durationMs": 2414,
+          "sizeKB": 126
         },
         {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1080,
-          "sizeKB": 1
-        },
-        {
-          "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+          "url": "https://ep2.adtrafficquality.google/sodar/sodar2.js",
           "type": "script",
-          "durationMs": 1106,
-          "sizeKB": 14
+          "durationMs": 1048,
+          "sizeKB": null
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1080,
+          "durationMs": 773,
           "sizeKB": 1
-        },
-        {
-          "url": "https://practice.expandtesting.com/img/avatar-blank.jpg",
-          "type": "img",
-          "durationMs": 543,
-          "sizeKB": 3
         }
       ],
       "performanceScore": "good",
@@ -2406,6 +2410,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/locators",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2429,6 +2449,11 @@
     },
     "uiLayout": {
       "url": "https://practice.expandtesting.com/my-browser",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
+      "url": "https://practice.expandtesting.com/my-browser",
       "headerFound": true,
       "headerVisible": true,
       "footerFound": true,
@@ -2462,28 +2487,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/my-browser",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/my-browser",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/my-browser",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2500,69 +2504,57 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/my-browser",
-      "firstContentfulPaint": 1252,
-      "domContentLoaded": 1435,
-      "totalLoadTime": 4008,
-      "timeToFirstByte": 347,
+      "firstContentfulPaint": 1080,
+      "domContentLoaded": 1432,
+      "totalLoadTime": 7046,
+      "timeToFirstByte": 322,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2357,
+          "totalMs": 1944,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8378,
-          "totalKB": 849
+          "totalMs": 10125,
+          "totalKB": 412
         },
         "img": {
           "count": 2,
-          "totalMs": 1337,
+          "totalMs": 928,
           "totalKB": 1
         },
         "fetch": {
           "count": 3,
-          "totalMs": 1190,
+          "totalMs": 937,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2340,
+          "totalMs": 2883,
           "totalKB": 32
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 4719,
-          "totalKB": 16
+          "totalMs": 5796,
+          "totalKB": 15
         }
       },
       "slowResources": [
         {
-          "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+          "url": "https://fundingchoicesmessages.google.com/i/ca-pub-1056034821646296?href=https%3A%2F%2Fpractice.expandtesting.com%2Fmy-browser&ers=2",
           "type": "script",
-          "durationMs": 1232,
-          "sizeKB": null
-        },
-        {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1012,
-          "sizeKB": 63
-        },
-        {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1002,
-          "sizeKB": 1
+          "durationMs": 4101,
+          "sizeKB": 69
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1002,
+          "durationMs": 605,
           "sizeKB": 1
         }
       ],
@@ -2573,6 +2565,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/my-browser",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2596,6 +2604,11 @@
     },
     "uiLayout": {
       "url": "https://practice.expandtesting.com/radio-buttons",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
+      "url": "https://practice.expandtesting.com/radio-buttons",
       "headerFound": true,
       "headerVisible": true,
       "footerFound": true,
@@ -2629,28 +2642,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/radio-buttons",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 12,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/radio-buttons",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/radio-buttons",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2667,41 +2659,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/radio-buttons",
-      "firstContentfulPaint": 1300,
-      "domContentLoaded": 1518,
-      "totalLoadTime": 4190,
-      "timeToFirstByte": 323,
+      "firstContentfulPaint": 1108,
+      "domContentLoaded": 1297,
+      "totalLoadTime": 3859,
+      "timeToFirstByte": 329,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1594,
+          "totalMs": 1731,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8658,
-          "totalKB": 921
+          "totalMs": 7900,
+          "totalKB": 388
         },
         "img": {
           "count": 2,
-          "totalMs": 1392,
+          "totalMs": 1141,
           "totalKB": 1
         },
         "fetch": {
           "count": 3,
-          "totalMs": 945,
+          "totalMs": 953,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2148,
-          "totalKB": 35
+          "totalMs": 2621,
+          "totalKB": 33
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4610,
+          "count": 18,
+          "totalMs": 9171,
           "totalKB": 14
         }
       },
@@ -2709,27 +2701,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1302,
+          "durationMs": 1133,
           "sizeKB": null
         },
         {
           "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
           "type": "script",
-          "durationMs": 1164,
+          "durationMs": 1087,
           "sizeKB": 63
-        },
-        {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1054,
-          "sizeKB": 1
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1054,
+          "durationMs": 823,
           "sizeKB": 1
         }
       ],
@@ -2740,6 +2726,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/radio-buttons",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2757,11 +2759,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/drag-and-drop",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/drag-and-drop",
       "headerFound": true,
       "headerVisible": true,
@@ -2796,28 +2803,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/drag-and-drop",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/drag-and-drop",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2834,63 +2820,69 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop",
-      "firstContentfulPaint": 1204,
-      "domContentLoaded": 1494,
-      "totalLoadTime": 3792,
-      "timeToFirstByte": 329,
+      "firstContentfulPaint": 1108,
+      "domContentLoaded": 1301,
+      "totalLoadTime": 4029,
+      "timeToFirstByte": 331,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1789,
+          "totalMs": 1888,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8213,
-          "totalKB": 409
+          "totalMs": 8147,
+          "totalKB": 413
         },
         "img": {
           "count": 2,
-          "totalMs": 1172,
+          "totalMs": 1147,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1310,
+          "count": 2,
+          "totalMs": 805,
           "totalKB": 0
         },
         "iframe": {
-          "count": 8,
-          "totalMs": 2372,
-          "totalKB": 31
+          "count": 7,
+          "totalMs": 2573,
+          "totalKB": 27
         },
         "xmlhttprequest": {
-          "count": 18,
-          "totalMs": 4879,
-          "totalKB": 16
+          "count": 17,
+          "totalMs": 6640,
+          "totalKB": 14
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1408,
+          "durationMs": 1130,
           "sizeKB": null
         },
         {
           "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
           "type": "script",
-          "durationMs": 1059,
+          "durationMs": 1070,
           "sizeKB": 63
+        },
+        {
+          "url": "https://fundingchoicesmessages.google.com/el/AGSKWxX4v8VVOrccOVuNch3-sYxSdFNFwFBbOtz2z9iyiQYSpSX_zM2dxWZ2ruo42_euviQoQxiV3VaX8POcisbv2_ex790jg5kmApvww4NR-Qe67VNSdpzkLCxJ0h0lubdmm0WGXOGsWw==",
+          "type": "xmlhttprequest",
+          "durationMs": 1630,
+          "sizeKB": null
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 851,
+          "durationMs": 822,
           "sizeKB": 1
         }
       ],
@@ -2901,6 +2893,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/drag-and-drop",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -2924,6 +2932,11 @@
     },
     "uiLayout": {
       "url": "https://practice.expandtesting.com/drag-and-drop-circles",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
+      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
       "headerFound": true,
       "headerVisible": true,
       "footerFound": true,
@@ -2957,28 +2970,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop-circles",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -2995,41 +2987,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop-circles",
-      "firstContentfulPaint": 1256,
-      "domContentLoaded": 1346,
-      "totalLoadTime": 4143,
-      "timeToFirstByte": 338,
+      "firstContentfulPaint": 1116,
+      "domContentLoaded": 1286,
+      "totalLoadTime": 3985,
+      "timeToFirstByte": 330,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1828,
+          "totalMs": 1681,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 8370,
-          "totalKB": 838
+          "totalMs": 8168,
+          "totalKB": 384
         },
         "img": {
           "count": 2,
-          "totalMs": 1391,
+          "totalMs": 1170,
           "totalKB": 1
         },
         "fetch": {
           "count": 3,
-          "totalMs": 1179,
+          "totalMs": 921,
           "totalKB": 0
         },
         "iframe": {
-          "count": 7,
-          "totalMs": 2297,
-          "totalKB": 27
+          "count": 8,
+          "totalMs": 2964,
+          "totalKB": 31
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5639,
+          "totalMs": 6565,
           "totalKB": 14
         }
       },
@@ -3037,27 +3029,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1351,
+          "durationMs": 1166,
           "sizeKB": null
         },
         {
           "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
           "type": "script",
-          "durationMs": 1112,
+          "durationMs": 1085,
           "sizeKB": 63
-        },
-        {
-          "url": "https://practice.expandtesting.com/assets/images/logo.svg",
-          "type": "img",
-          "durationMs": 1047,
-          "sizeKB": 1
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 1047,
+          "durationMs": 846,
           "sizeKB": 1
         }
       ],
@@ -3068,6 +3054,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3091,6 +3093,24 @@
     },
     "uiLayout": {
       "url": "https://practice.expandtesting.com/form-validation",
+      "formCount": 1,
+      "forms": [
+        {
+          "index": 0,
+          "fieldCount": 4,
+          "purpose": "unknown",
+          "criticalMissingValidation": [],
+          "isCritical": true,
+          "hasSubmitBtn": true,
+          "hasEmailField": false,
+          "hasRequiredFields": true,
+          "browserValidationActive": true,
+          "detectionMethod": "fallback"
+        }
+      ]
+    },
+    "navigation": {
+      "url": "https://practice.expandtesting.com/form-validation",
       "headerFound": true,
       "headerVisible": true,
       "footerFound": true,
@@ -3124,41 +3144,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/form-validation",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/form-validation",
-      "formCount": 1,
-      "forms": [
-        {
-          "index": 0,
-          "fieldCount": 4,
-          "purpose": "unknown",
-          "criticalMissingValidation": [],
-          "isCritical": true,
-          "hasSubmitBtn": true,
-          "hasEmailField": false,
-          "hasRequiredFields": true,
-          "browserValidationActive": true,
-          "detectionMethod": "fallback"
-        }
-      ]
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/form-validation",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3175,49 +3161,49 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/form-validation",
-      "firstContentfulPaint": 1204,
-      "domContentLoaded": 1534,
-      "totalLoadTime": 4072,
-      "timeToFirstByte": 339,
+      "firstContentfulPaint": 1024,
+      "domContentLoaded": 1384,
+      "totalLoadTime": 3606,
+      "timeToFirstByte": 335,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1824,
+          "totalMs": 2266,
           "totalKB": 39
         },
         "script": {
           "count": 18,
-          "totalMs": 8822,
-          "totalKB": 901
+          "totalMs": 8333,
+          "totalKB": 448
         },
         "img": {
           "count": 2,
-          "totalMs": 1246,
+          "totalMs": 1113,
           "totalKB": 1
         },
         "fetch": {
           "count": 3,
-          "totalMs": 1116,
+          "totalMs": 1019,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 2440,
-          "totalKB": 34
+          "totalMs": 3047,
+          "totalKB": 32
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 5168,
-          "totalKB": 14
+          "count": 18,
+          "totalMs": 4872,
+          "totalKB": 15
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1116,
+          "durationMs": 1051,
           "sizeKB": null
         }
       ],
@@ -3225,7 +3211,7 @@
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 920,
+          "durationMs": 755,
           "sizeKB": 1
         }
       ],
@@ -3236,6 +3222,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/form-validation",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3253,62 +3255,11 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
-      "url": "https://practice.expandtesting.com/upload",
-      "headerFound": true,
-      "headerVisible": true,
-      "footerFound": true,
-      "footerVisible": true,
-      "mainCTAVisible": false,
-      "ctaCount": 0,
-      "ctaTexts": [],
-      "ctaTypes": [],
-      "ctaDetectionMethod": "fallback",
-      "logoDetected": true,
-      "logoVisible": true,
-      "logoLinksHome": true,
-      "responsiveness": {
-        "mobile": {
-          "viewportWidth": 375,
-          "responsive": false,
-          "hasHorizontalScroll": true,
-          "bodyWidth": 375
-        },
-        "tablet": {
-          "viewportWidth": 768,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 768
-        },
-        "desktop": {
-          "viewportWidth": 1440,
-          "responsive": true,
-          "hasHorizontalScroll": false,
-          "bodyWidth": 1440
-        }
-      }
-    },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/upload",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 16,
-        "internalLinks": 12,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
-    "forms": {
       "url": "https://practice.expandtesting.com/upload",
       "formCount": 1,
       "forms": [
@@ -3326,7 +3277,42 @@
         }
       ]
     },
-    "ecommerce": {
+    "navigation": {
+      "url": "https://practice.expandtesting.com/upload",
+      "headerFound": true,
+      "headerVisible": true,
+      "footerFound": true,
+      "footerVisible": true,
+      "mainCTAVisible": false,
+      "ctaCount": 0,
+      "ctaTexts": [],
+      "ctaTypes": [],
+      "ctaDetectionMethod": "fallback",
+      "logoDetected": true,
+      "logoVisible": true,
+      "logoLinksHome": true,
+      "responsiveness": {
+        "mobile": {
+          "viewportWidth": 375,
+          "responsive": false,
+          "hasHorizontalScroll": true,
+          "bodyWidth": 375
+        },
+        "tablet": {
+          "viewportWidth": 768,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 768
+        },
+        "desktop": {
+          "viewportWidth": 1440,
+          "responsive": true,
+          "hasHorizontalScroll": false,
+          "bodyWidth": 1440
+        }
+      }
+    },
+    "forms": {
       "url": "https://practice.expandtesting.com/upload",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3343,49 +3329,49 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/upload",
-      "firstContentfulPaint": 1212,
-      "domContentLoaded": 1533,
-      "totalLoadTime": 4065,
-      "timeToFirstByte": 329,
+      "firstContentfulPaint": 992,
+      "domContentLoaded": 1374,
+      "totalLoadTime": 3873,
+      "timeToFirstByte": 333,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1653,
+          "totalMs": 1962,
           "totalKB": 39
         },
         "script": {
           "count": 18,
-          "totalMs": 9214,
-          "totalKB": 464
+          "totalMs": 8842,
+          "totalKB": 426
         },
         "img": {
-          "count": 2,
-          "totalMs": 1240,
+          "count": 7,
+          "totalMs": 1960,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1395,
+          "count": 2,
+          "totalMs": 804,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 3284,
+          "totalMs": 3062,
           "totalKB": 35
         },
         "xmlhttprequest": {
           "count": 17,
-          "totalMs": 5143,
-          "totalKB": 14
+          "totalMs": 4893,
+          "totalKB": 16
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1140,
+          "durationMs": 1056,
           "sizeKB": null
         }
       ],
@@ -3393,7 +3379,7 @@
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 914,
+          "durationMs": 762,
           "sizeKB": 1
         }
       ],
@@ -3404,6 +3390,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/upload",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3421,11 +3423,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 5,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/download",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/download",
       "headerFound": true,
       "headerVisible": true,
@@ -3460,28 +3467,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/download",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 35,
-        "internalLinks": 31,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/download",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/download",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3498,63 +3484,63 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/download",
-      "firstContentfulPaint": 1388,
-      "domContentLoaded": 1395,
-      "totalLoadTime": 4287,
-      "timeToFirstByte": 333,
+      "firstContentfulPaint": 1168,
+      "domContentLoaded": 1434,
+      "totalLoadTime": 4626,
+      "timeToFirstByte": 334,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 2138,
+          "totalMs": 1653,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 9109,
-          "totalKB": 901
+          "totalMs": 8091,
+          "totalKB": 389
         },
         "img": {
           "count": 2,
-          "totalMs": 1278,
+          "totalMs": 1194,
           "totalKB": 1
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 1439,
+          "count": 5,
+          "totalMs": 1283,
           "totalKB": 0
         },
         "iframe": {
-          "count": 9,
-          "totalMs": 2494,
-          "totalKB": 39
+          "count": 10,
+          "totalMs": 4588,
+          "totalKB": 43
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4793,
-          "totalKB": 15
+          "count": 18,
+          "totalMs": 8615,
+          "totalKB": 14
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1275,
+          "durationMs": 1191,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1083,
-          "sizeKB": 63
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133745&plat=3%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Fdownload&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=0.1423&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133744858&bpp=8&bdt=1048&idt=673&shv=r20260225&mjsv=m202602260101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=7147339212460&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378429%2C95381340%2C95381489%2C95382853%2C95383860%2C31096975%2C95383643&oid=2&pvsid=4928246711055406&tmod=386762605&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&plas=250x567_r&bz=1&ifi=1&uci=a!1&fsb=1&dtd=704",
+          "type": "iframe",
+          "durationMs": 1193,
+          "sizeKB": 10
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 951,
+          "durationMs": 872,
           "sizeKB": 1
         }
       ],
@@ -3565,6 +3551,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/download",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 44,
+        "internalLinks": 40,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3582,11 +3584,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 3,
+      "failedRequestCount": 5,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/add-remove-elements",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/add-remove-elements",
       "headerFound": true,
       "headerVisible": true,
@@ -3609,8 +3616,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": false,
-          "hasHorizontalScroll": true,
+          "responsive": true,
+          "hasHorizontalScroll": false,
           "bodyWidth": 768
         },
         "desktop": {
@@ -3621,28 +3628,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/add-remove-elements",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/add-remove-elements",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/add-remove-elements",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3659,55 +3645,55 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/add-remove-elements",
-      "firstContentfulPaint": 1300,
-      "domContentLoaded": 1369,
-      "totalLoadTime": 3686,
-      "timeToFirstByte": 339,
+      "firstContentfulPaint": 1160,
+      "domContentLoaded": 1512,
+      "totalLoadTime": 3518,
+      "timeToFirstByte": 331,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1611,
+          "totalMs": 1718,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 7731,
-          "totalKB": 837
+          "totalMs": 7990,
+          "totalKB": 384
         },
         "img": {
           "count": 2,
-          "totalMs": 1304,
+          "totalMs": 1228,
           "totalKB": 1
         },
         "fetch": {
-          "count": 3,
-          "totalMs": 1163,
+          "count": 5,
+          "totalMs": 1177,
           "totalKB": 0
         },
         "iframe": {
-          "count": 7,
-          "totalMs": 1887,
-          "totalKB": 28
+          "count": 8,
+          "totalMs": 2548,
+          "totalKB": 32
         },
         "xmlhttprequest": {
           "count": 18,
-          "totalMs": 5009,
-          "totalKB": 16
+          "totalMs": 5013,
+          "totalKB": 15
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1281,
+          "durationMs": 1229,
           "sizeKB": null
         },
         {
           "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
           "type": "script",
-          "durationMs": 1100,
+          "durationMs": 1058,
           "sizeKB": 63
         }
       ],
@@ -3715,7 +3701,7 @@
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 984,
+          "durationMs": 896,
           "sizeKB": 1
         }
       ],
@@ -3726,6 +3712,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/add-remove-elements",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3750,6 +3752,11 @@
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/download-secure",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/download-secure",
       "headerFound": false,
       "headerVisible": false,
@@ -3784,28 +3791,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/download-secure",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 0,
-        "internalLinks": 0,
-        "externalLinks": 0,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/download-secure",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/download-secure",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3822,12 +3808,12 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/download-secure",
-      "firstContentfulPaint": 604,
-      "domContentLoaded": 561,
-      "totalLoadTime": 563,
-      "timeToFirstByte": 319,
+      "firstContentfulPaint": 556,
+      "domContentLoaded": 544,
+      "totalLoadTime": 544,
+      "timeToFirstByte": 339,
       "resourceSummary": {},
       "slowResources": [],
       "largeImages": [],
@@ -3838,6 +3824,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/download-secure",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -3855,11 +3857,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 2,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/notification-message",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/notification-message",
       "headerFound": true,
       "headerVisible": true,
@@ -3882,8 +3889,8 @@
         },
         "tablet": {
           "viewportWidth": 768,
-          "responsive": false,
-          "hasHorizontalScroll": true,
+          "responsive": true,
+          "hasHorizontalScroll": false,
           "bodyWidth": 768
         },
         "desktop": {
@@ -3894,28 +3901,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/notification-message",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 17,
-        "internalLinks": 13,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/notification-message",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/notification-message",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -3932,57 +3918,63 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/notification-message",
-      "firstContentfulPaint": 1592,
-      "domContentLoaded": 1657,
-      "totalLoadTime": 4258,
-      "timeToFirstByte": 332,
+      "firstContentfulPaint": 1556,
+      "domContentLoaded": 1673,
+      "totalLoadTime": 4109,
+      "timeToFirstByte": 335,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1523,
+          "totalMs": 1729,
           "totalKB": 39
         },
         "script": {
           "count": 17,
-          "totalMs": 7680,
-          "totalKB": 447
+          "totalMs": 7593,
+          "totalKB": 446
         },
         "img": {
           "count": 2,
-          "totalMs": 1223,
+          "totalMs": 1216,
           "totalKB": 1
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 985,
+          "count": 2,
+          "totalMs": 801,
           "totalKB": 0
         },
         "iframe": {
           "count": 8,
-          "totalMs": 3887,
-          "totalKB": 35
+          "totalMs": 3128,
+          "totalKB": 31
         },
         "xmlhttprequest": {
-          "count": 17,
-          "totalMs": 4608,
-          "totalKB": 15
+          "count": 18,
+          "totalMs": 9230,
+          "totalKB": 14
         }
       },
       "slowResources": [
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1238,
+          "durationMs": 1195,
           "sizeKB": null
+        },
+        {
+          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+          "type": "script",
+          "durationMs": 1028,
+          "sizeKB": 63
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 900,
+          "durationMs": 888,
           "sizeKB": 1
         }
       ],
@@ -3993,6 +3985,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/notification-message",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   },
   {
@@ -4010,11 +4018,16 @@
       "ignoredNoise": [],
       "consoleErrorCount": 0,
       "significantErrorCount": 0,
-      "failedRequestCount": 4,
+      "failedRequestCount": 12,
       "criticalFailedCount": 0,
       "detectionMethod": "fallback"
     },
     "uiLayout": {
+      "url": "https://practice.expandtesting.com/autocomplete",
+      "formCount": 0,
+      "forms": []
+    },
+    "navigation": {
       "url": "https://practice.expandtesting.com/autocomplete",
       "headerFound": true,
       "headerVisible": true,
@@ -4049,28 +4062,7 @@
         }
       }
     },
-    "navigation": {
-      "url": "https://practice.expandtesting.com/autocomplete",
-      "navigationHealth": "good",
-      "severity": "low",
-      "metrics": {
-        "totalLinks": 15,
-        "internalLinks": 11,
-        "externalLinks": 4,
-        "brokenLinks": 0,
-        "protectedLinks": 0
-      },
-      "navigationIssues": [],
-      "brokenLinks": [],
-      "protectedLinks": [],
-      "insight": "All navigation links are functional and properly structured."
-    },
     "forms": {
-      "url": "https://practice.expandtesting.com/autocomplete",
-      "formCount": 0,
-      "forms": []
-    },
-    "ecommerce": {
       "url": "https://practice.expandtesting.com/autocomplete",
       "isEcommerce": false,
       "ecommerceType": "none",
@@ -4087,41 +4079,41 @@
         "Not ecommerce: ANTHROPIC_API_KEY not set"
       ]
     },
-    "performance": {
+    "ecommerce": {
       "url": "https://practice.expandtesting.com/autocomplete",
-      "firstContentfulPaint": 1184,
-      "domContentLoaded": 1541,
-      "totalLoadTime": 3531,
-      "timeToFirstByte": 335,
+      "firstContentfulPaint": 1592,
+      "domContentLoaded": 1931,
+      "totalLoadTime": 6045,
+      "timeToFirstByte": 906,
       "resourceSummary": {
         "link": {
           "count": 5,
-          "totalMs": 1231,
+          "totalMs": 1625,
           "totalKB": 39
         },
         "script": {
-          "count": 18,
-          "totalMs": 8189,
-          "totalKB": 853
+          "count": 19,
+          "totalMs": 8068,
+          "totalKB": 547
         },
         "img": {
           "count": 2,
-          "totalMs": 1223,
+          "totalMs": 1062,
           "totalKB": 1
         },
         "fetch": {
-          "count": 4,
-          "totalMs": 1351,
+          "count": 3,
+          "totalMs": 974,
           "totalKB": 0
         },
         "iframe": {
-          "count": 8,
-          "totalMs": 2301,
-          "totalKB": 33
+          "count": 10,
+          "totalMs": 3987,
+          "totalKB": 129
         },
         "xmlhttprequest": {
-          "count": 18,
-          "totalMs": 4867,
+          "count": 17,
+          "totalMs": 4632,
           "totalKB": 14
         }
       },
@@ -4129,21 +4121,21 @@
         {
           "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
           "type": "script",
-          "durationMs": 1195,
+          "durationMs": 1068,
           "sizeKB": null
         },
         {
-          "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
-          "type": "script",
-          "durationMs": 1014,
-          "sizeKB": 63
+          "url": "https://googleads.g.doubleclick.net/pagead/ads?client=ca-pub-1056034821646296&output=html&adk=1812271804&adf=3025194257&lmt=1772133774&plat=3%3A16%2C4%3A16%2C9%3A32776%2C16%3A8388608%2C17%3A32%2C24%3A32%2C25%3A32%2C30%3A1081344%2C32%3A32%2C41%3A32%2C42%3A32%2C43%3A32&format=0x0&url=https%3A%2F%2Fpractice.expandtesting.com%2Fautocomplete&pra=5&asro=0&aiapm=0.1542&aiapmd=0.1423&aiapmi=0.16&aiapmid=1&aiact=0.5423&aiactd=0.7&aicct=0.7&aicctd=0.5799&ailct=0.5849&ailctd=0.65&aimart=4&aimartd=4&aieuf=1&aicrs=1&uach=WyJXaW5kb3dzIiwiMTkuMC4wIiwieDg2IiwiIiwiMTQ1LjAuNzYzMi42IixudWxsLDAsbnVsbCwiNjQiLFtbIk5vdDpBLUJyYW5kIiwiOTkuMC4wLjAiXSxbIkhlYWRsZXNzQ2hyb21lIiwiMTQ1LjAuNzYzMi42Il0sWyJDaHJvbWl1bSIsIjE0NS4wLjc2MzIuNiJdXSwwXQ..&abgtt=6&dt=1772133774689&bpp=6&bdt=960&idt=251&shv=r20260225&mjsv=m202602250101&ptt=9&saldr=aa&abxe=1&cookie_enabled=1&eoidce=1&nras=1&correlator=2470250504910&frm=20&pv=2&u_tz=300&u_his=2&u_h=720&u_w=1280&u_ah=720&u_aw=1280&u_cd=24&u_sd=1&dmc=8&adx=-12245933&ady=-12245933&biw=1280&bih=720&scr_x=0&scr_y=0&eid=95378425%2C95382852%2C95383700%2C95383860%2C31096937%2C42533294%2C95383665&oid=2&pvsid=5222659642870913&tmod=1834605184&uas=0&nvt=1&fsapi=1&fc=1920&brdim=0%2C0%2C0%2C0%2C1280%2C0%2C1280%2C720%2C1280%2C720&vis=1&rsz=%7C%7Cs%7C&abl=NS&fu=32768&bc=31&bz=1&ifi=1&uci=a!1&fsb=1&dtd=278",
+          "type": "iframe",
+          "durationMs": 1092,
+          "sizeKB": 106
         }
       ],
       "largeImages": [
         {
           "url": "https://practice.expandtesting.com/assets/images/logo.svg",
           "type": "img",
-          "durationMs": 905,
+          "durationMs": 735,
           "sizeKB": 1
         }
       ],
@@ -4154,6 +4146,22 @@
       "recommendations": [],
       "userImpact": null,
       "detectionMethod": "fallback"
+    },
+    "performance": {
+      "url": "https://practice.expandtesting.com/autocomplete",
+      "navigationHealth": "good",
+      "severity": "low",
+      "metrics": {
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": 0,
+        "protectedLinks": 0
+      },
+      "navigationIssues": [],
+      "brokenLinks": [],
+      "protectedLinks": [],
+      "insight": "All navigation links are functional and properly structured."
     }
   }
 ]

@@ -4,8 +4,10 @@
   "description": "",
   "main": "audit.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "audit": "node --env-file=.env main.js"
+    "audit": "node src/auditor.js",
+    "report": "node src/reporter.js",
+    "generate": "node src/generator.js",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
@@ -14,5 +16,8 @@
   "dependencies": {
     "playwright": "^1.58.1",
     "playwright-extra": "^4.3.6"
+  },
+  "devDependencies": {
+    "prettier": "^3.8.1"
   }
 }

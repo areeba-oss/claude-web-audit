@@ -1,0 +1,2411 @@
+{
+  "meta": {
+    "reportTitle": "Web Audit Report — practice.expandtesting.com",
+    "domain": "practice.expandtesting.com",
+    "generatedAt": "2026-02-26T19:23:34.485Z",
+    "auditedPages": 25,
+    "tool": "Expand Testing Web Auditor",
+    "version": "1.0"
+  },
+  "executiveSummary": {
+    "headline": "Your site scores 75/100 — there are meaningful improvements that could boost performance and conversions.",
+    "overallScore": 75,
+    "grade": {
+      "grade": "B",
+      "label": "Good",
+      "color": "#84cc16"
+    },
+    "keyStats": [
+      {
+        "label": "Pages Audited",
+        "value": 25,
+        "icon": "🔍"
+      },
+      {
+        "label": "Critical Issues",
+        "value": 1,
+        "icon": "🚨",
+        "highlight": true
+      },
+      {
+        "label": "Warnings",
+        "value": 2,
+        "icon": "⚠️"
+      },
+      {
+        "label": "Mobile Failures",
+        "value": 0,
+        "icon": "📱",
+        "highlight": false
+      },
+      {
+        "label": "Avg. Load Speed",
+        "value": null,
+        "icon": "⚡"
+      }
+    ],
+    "topFindings": [
+      "🚨 1 critical issue(s) found across 25 pages",
+      "⚠️ 2 warning(s) flagged for review"
+    ],
+    "callToAction": "The issues identified below are actionable improvements that can increase search rankings, improve user experience, and drive more conversions. Our team can resolve these efficiently."
+  },
+  "pageBreakdown": [
+    {
+      "url": "https://practice.expandtesting.com/",
+      "slug": "/",
+      "overallScore": 70,
+      "grade": {
+        "grade": "C",
+        "label": "Fair",
+        "color": "#f59e0b"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 1,
+        "significantErrors": 1,
+        "failedRequests": 24,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "warning",
+          "message": "1 console error(s) detected — may indicate broken functionality."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/tips",
+      "slug": "/tips",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 5,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/test-cases",
+      "slug": "/test-cases",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/notes/api/api-docs",
+      "slug": "/notes/api/api-docs",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 0,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/about",
+      "slug": "/about",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/xpath-css-tester",
+      "slug": "/xpath-css-tester",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/inputs",
+      "slug": "/inputs",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 23,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/login",
+      "slug": "/login",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 5,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/register",
+      "slug": "/register",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/forgot-password",
+      "slug": "/forgot-password",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 18,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/otp-login",
+      "slug": "/otp-login",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/dynamic-table",
+      "slug": "/dynamic-table",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
+      "slug": "/dynamic-pagination-table",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 18,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/locators",
+      "slug": "/locators",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 24,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/my-browser",
+      "slug": "/my-browser",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/radio-buttons",
+      "slug": "/radio-buttons",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/drag-and-drop",
+      "slug": "/drag-and-drop",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
+      "slug": "/drag-and-drop-circles",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/form-validation",
+      "slug": "/form-validation",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/upload",
+      "slug": "/upload",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/download",
+      "slug": "/download",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 5,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/add-remove-elements",
+      "slug": "/add-remove-elements",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 5,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/download-secure",
+      "slug": "/download-secure",
+      "overallScore": 37,
+      "grade": {
+        "grade": "F",
+        "label": "Critical Issues",
+        "color": "#ef4444"
+      },
+      "health": {
+        "status": 401,
+        "ok": false,
+        "consoleErrors": 1,
+        "significantErrors": 1,
+        "failedRequests": 0,
+        "criticalFailures": 0,
+        "summary": "HTTP 401",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page returned HTTP 401 — users may not be able to access this page."
+        },
+        {
+          "type": "warning",
+          "message": "1 console error(s) detected — may indicate broken functionality."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/notification-message",
+      "slug": "/notification-message",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 2,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/autocomplete",
+      "slug": "/autocomplete",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 12,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "unknown",
+        "firstContentfulPaint": {
+          "formatted": null,
+          "grade": null
+        },
+        "timeToFirstByte": {
+          "formatted": null,
+          "grade": null
+        },
+        "domContentLoaded": {
+          "formatted": null
+        },
+        "totalLoadTime": {
+          "formatted": null
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Partial",
+          "color": "#f59e0b",
+          "score": 60
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444"
+        },
+        "desktop": {
+          "label": "Issues",
+          "color": "#ef4444"
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Broken Links Detected",
+          "color": "#ef4444"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": ""
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    }
+  ],
+  "opportunitySummary": {
+    "title": "Growth Opportunities Identified",
+    "description": "Addressing these items can directly impact your search rankings, page speed, and user engagement.",
+    "items": [
+      {
+        "id": 1,
+        "opportunity": "Implement responsive CSS breakpoints for mobile devices (375px viewport)."
+      },
+      {
+        "id": 2,
+        "opportunity": "Add prominent CTA buttons to drive user engagement and conversions."
+      }
+    ]
+  },
+  "categoryScorecard": {
+    "title": "How Your Site Performs by Category",
+    "categories": [
+      {
+        "name": "Page Health",
+        "description": "HTTP status, server errors, and critical failures",
+        "score": 96,
+        "grade": {
+          "grade": "A",
+          "label": "Excellent",
+          "color": "#22c55e"
+        }
+      },
+      {
+        "name": "Page Speed",
+        "description": "First Contentful Paint, TTFB, and load times",
+        "score": 25,
+        "grade": {
+          "grade": "F",
+          "label": "Critical Issues",
+          "color": "#ef4444"
+        }
+      },
+      {
+        "name": "Mobile Experience",
+        "description": "Responsiveness across mobile, tablet, and desktop",
+        "score": 60,
+        "grade": {
+          "grade": "C",
+          "label": "Fair",
+          "color": "#f59e0b"
+        }
+      },
+      {
+        "name": "Navigation & Links",
+        "description": "Broken links, anchor integrity, and link structure",
+        "score": 65,
+        "grade": {
+          "grade": "C",
+          "label": "Fair",
+          "color": "#f59e0b"
+        }
+      },
+      {
+        "name": "Layout & UX",
+        "description": "Header, footer, logo, and call-to-action presence",
+        "score": 0,
+        "grade": {
+          "grade": "F",
+          "label": "Critical Issues",
+          "color": "#ef4444"
+        }
+      }
+    ]
+  }
+}
