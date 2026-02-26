@@ -8,9 +8,7 @@
       "blankScreen": false,
       "aiHealthScore": "good",
       "aiHealthSummary": "HTTP 200",
-      "significantErrors": [
-        "Error: <svg> attribute width: Expected length, \"auto\"."
-      ],
+      "significantErrors": ["Error: <svg> attribute width: Expected length, \"auto\"."],
       "significantWarnings": [],
       "criticalFailedReqs": [],
       "ignoredNoise": [],
@@ -73,9 +71,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/",
@@ -274,9 +270,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/tips",
@@ -435,9 +429,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/test-cases",
@@ -609,9 +601,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/notes/api/api-docs",
@@ -759,9 +749,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/about",
@@ -945,9 +933,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/xpath-css-tester",
@@ -1124,9 +1110,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/inputs",
@@ -1298,9 +1282,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/login",
@@ -1484,9 +1466,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/register",
@@ -1658,9 +1638,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/forgot-password",
@@ -1838,9 +1816,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/otp-login",
@@ -2005,9 +1981,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-table",
@@ -2172,9 +2146,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/dynamic-pagination-table",
@@ -2333,9 +2305,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/locators",
@@ -2500,9 +2470,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/my-browser",
@@ -2655,9 +2623,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/radio-buttons",
@@ -2816,9 +2782,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop",
@@ -2983,9 +2947,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/drag-and-drop-circles",
@@ -3157,9 +3119,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/form-validation",
@@ -3325,9 +3285,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/upload",
@@ -3480,9 +3438,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/download",
@@ -3641,9 +3597,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/add-remove-elements",
@@ -3804,9 +3758,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/download-secure",
@@ -3914,9 +3866,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/notification-message",
@@ -4075,9 +4025,7 @@
       "cartPageLoaded": false,
       "checkoutAccessible": false,
       "detectionMethod": "fallback",
-      "notes": [
-        "Not ecommerce: ANTHROPIC_API_KEY not set"
-      ]
+      "notes": ["Not ecommerce: ANTHROPIC_API_KEY not set"]
     },
     "ecommerce": {
       "url": "https://practice.expandtesting.com/autocomplete",
