@@ -1,0 +1,4527 @@
+{
+  "meta": {
+    "reportTitle": "Web Audit Report — practice.expandtesting.com",
+    "domain": "practice.expandtesting.com",
+    "generatedAt": "2026-02-26T16:07:46.790Z",
+    "auditedPages": 25,
+    "tool": "Expand Testing Web Auditor",
+    "version": "1.0"
+  },
+  "executiveSummary": {
+    "headline": "Your site scores 82/100 — there are meaningful improvements that could boost performance and conversions.",
+    "overallScore": 82,
+    "grade": {
+      "grade": "B",
+      "label": "Good",
+      "color": "#84cc16"
+    },
+    "keyStats": [
+      {
+        "label": "Pages Audited",
+        "value": 25,
+        "icon": "🔍"
+      },
+      {
+        "label": "Critical Issues",
+        "value": 24,
+        "icon": "🚨",
+        "highlight": true
+      },
+      {
+        "label": "Warnings",
+        "value": 2,
+        "icon": "⚠️"
+      },
+      {
+        "label": "Mobile Failures",
+        "value": 23,
+        "icon": "📱",
+        "highlight": true
+      },
+      {
+        "label": "Avg. Load Speed",
+        "value": "1.36s",
+        "icon": "⚡",
+        "subLabel": "Fast"
+      }
+    ],
+    "topFindings": [
+      "🚨 24 critical issue(s) found across 25 pages",
+      "📱 23 of 25 pages are not mobile-ready",
+      "⚠️ 2 warning(s) flagged for review"
+    ],
+    "callToAction": "The issues identified below are actionable improvements that can increase search rankings, improve user experience, and drive more conversions. Our team can resolve these efficiently."
+  },
+  "pageBreakdown": [
+    {
+      "url": "https://practice.expandtesting.com/",
+      "slug": "/",
+      "overallScore": 77,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 5,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1216,
+          "formatted": "1.22s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 348,
+          "formatted": "0.35s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1450,
+          "formatted": "1.45s"
+        },
+        "totalLoadTime": {
+          "ms": 4265,
+          "formatted": "4.26s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2087,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 8422,
+            "totalKB": 863
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1089,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 5,
+            "totalMs": 1857,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 14,
+            "totalMs": 4816,
+            "totalKB": 63
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5734,
+            "totalKB": 16
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.04s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.74s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "Minor Issues Found",
+          "color": "#f59e0b"
+        },
+        "severity": "low",
+        "totalLinks": 109,
+        "internalLinks": 96,
+        "externalLinks": 13,
+        "brokenLinks": [],
+        "protectedLinks": [
+          "https://practice.expandtesting.com/download-secure",
+          "https://practice.expandtesting.com/basic-auth",
+          "https://practice.expandtesting.com/digest-auth"
+        ],
+        "issues": [
+          {
+            "text": "Demos",
+            "url": "https://practice.expandtesting.com/#examples",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "Examples",
+            "url": "https://practice.expandtesting.com/#examples",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "Apps",
+            "url": "https://practice.expandtesting.com/#apps",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "APIs",
+            "url": "https://practice.expandtesting.com/#api",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "Assertions",
+            "url": "https://practice.expandtesting.com/#assertions",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "Reports",
+            "url": "https://practice.expandtesting.com/#reports",
+            "issue": "Unknown issue"
+          },
+          {
+            "text": "Tools",
+            "url": "https://practice.expandtesting.com/#tools",
+            "issue": "Unknown issue"
+          }
+        ],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "7 navigation anchor link(s) have unknown resolution."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions.",
+        "Audit and fix anchor-based navigation links."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/tips",
+      "slug": "/tips",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1288,
+          "formatted": "1.29s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 335,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1358,
+          "formatted": "1.36s"
+        },
+        "totalLoadTime": {
+          "ms": 4248,
+          "formatted": "4.25s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2236,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8454,
+            "totalKB": 384
+          },
+          "img": {
+            "count": 8,
+            "totalMs": 2299,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1152,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2606,
+            "totalKB": 31
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5504,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.26s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.04s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.92s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 24,
+        "internalLinks": 20,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/test-cases",
+      "slug": "/test-cases",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1380,
+          "formatted": "1.38s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 322,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1539,
+          "formatted": "1.54s"
+        },
+        "totalLoadTime": {
+          "ms": 3972,
+          "formatted": "3.97s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2064,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 7954,
+            "totalKB": 447
+          },
+          "img": {
+            "count": 1,
+            "totalMs": 910,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1437,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 7,
+            "totalMs": 2047,
+            "totalKB": 28
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5108,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.15s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.91s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 17,
+        "internalLinks": 13,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/notes/api/api-docs",
+      "slug": "/notes/api/api-docs",
+      "overallScore": 83,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 0,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "poor",
+        "firstContentfulPaint": {
+          "ms": 4032,
+          "formatted": "4.03s",
+          "grade": {
+            "label": "Slow",
+            "color": "#ef4444"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 322,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 3600,
+          "formatted": "3.60s"
+        },
+        "totalLoadTime": {
+          "ms": 3979,
+          "formatted": "3.98s"
+        },
+        "resources": {
+          "link": {
+            "count": 1,
+            "totalMs": 1760,
+            "totalKB": 31
+          },
+          "script": {
+            "count": 5,
+            "totalMs": 4827,
+            "totalKB": 577
+          },
+          "xmlhttprequest": {
+            "count": 6,
+            "totalMs": 2093,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 1,
+            "totalMs": 361,
+            "totalKB": 4
+          },
+          "img": {
+            "count": 1,
+            "totalMs": 733,
+            "totalKB": 0
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui.css",
+            "type": "link",
+            "duration": "1.76s",
+            "sizeKB": 31
+          },
+          {
+            "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui-bundle.js",
+            "type": "script",
+            "duration": "2.06s",
+            "sizeKB": 473
+          },
+          {
+            "url": "https://practice.expandtesting.com/notes/api/api-docs/swagger-ui-standalone-preset.js",
+            "type": "script",
+            "duration": "1.76s",
+            "sizeKB": 88
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://validator.swagger.io/validator?url=https%3A%2F%2Fpractice.expandtesting.com%2Fnotes%2Fapi%2Fswagger.json",
+            "duration": "0.73s",
+            "sizeKB": null
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Fully Responsive",
+          "color": "#22c55e",
+          "score": 100,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 25,
+        "internalLinks": 22,
+        "externalLinks": 3,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": true,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "warning",
+          "message": "Slow page paint (4.03s) — users may perceive the page as sluggish."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 3 slow-loading resource(s) to improve page speed.",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/about",
+      "slug": "/about",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1316,
+          "formatted": "1.32s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 339,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1423,
+          "formatted": "1.42s"
+        },
+        "totalLoadTime": {
+          "ms": 4172,
+          "formatted": "4.17s"
+        },
+        "resources": {
+          "link": {
+            "count": 4,
+            "totalMs": 1911,
+            "totalKB": 37
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8747,
+            "totalKB": 850
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1299,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1013,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2566,
+            "totalKB": 34
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4468,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.29s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.16s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.96s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 11,
+        "externalLinks": 5,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/xpath-css-tester",
+      "slug": "/xpath-css-tester",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1036,
+          "formatted": "1.04s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 327,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1468,
+          "formatted": "1.47s"
+        },
+        "totalLoadTime": {
+          "ms": 3478,
+          "formatted": "3.48s"
+        },
+        "resources": {
+          "link": {
+            "count": 6,
+            "totalMs": 2072,
+            "totalKB": 40
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 9180,
+            "totalKB": 609
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1138,
+            "totalKB": 1
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2418,
+            "totalKB": 30
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1094,
+            "totalKB": 0
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4642,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.36s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.81s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/inputs",
+      "slug": "/inputs",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1168,
+          "formatted": "1.17s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 326,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1307,
+          "formatted": "1.31s"
+        },
+        "totalLoadTime": {
+          "ms": 3616,
+          "formatted": "3.62s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1894,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 7335,
+            "totalKB": 409
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1220,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1113,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 9,
+            "totalMs": 3276,
+            "totalKB": 41
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4797,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.17s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.88s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/login",
+      "slug": "/login",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1216,
+          "formatted": "1.22s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 338,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1421,
+          "formatted": "1.42s"
+        },
+        "totalLoadTime": {
+          "ms": 4097,
+          "formatted": "4.10s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1643,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8108,
+            "totalKB": 863
+          },
+          "img": {
+            "count": 3,
+            "totalMs": 1708,
+            "totalKB": 60
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1484,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 9,
+            "totalMs": 4178,
+            "totalKB": 36
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4458,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.18s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.87s",
+            "sizeKB": 1
+          },
+          {
+            "url": "https://practice.expandtesting.com/img/auth-login.png",
+            "duration": "0.51s",
+            "sizeKB": 59
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 17,
+        "internalLinks": 13,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/register",
+      "slug": "/register",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1200,
+          "formatted": "1.20s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 355,
+          "formatted": "0.35s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1494,
+          "formatted": "1.49s"
+        },
+        "totalLoadTime": {
+          "ms": 3645,
+          "formatted": "3.65s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1894,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 7856,
+            "totalKB": 384
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1237,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1250,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 7,
+            "totalMs": 2467,
+            "totalKB": 29
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4482,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.31s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.05s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.90s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/forgot-password",
+      "slug": "/forgot-password",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1364,
+          "formatted": "1.36s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 324,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1724,
+          "formatted": "1.72s"
+        },
+        "totalLoadTime": {
+          "ms": 4636,
+          "formatted": "4.64s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2300,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 9783,
+            "totalKB": 863
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1455,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1374,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 3461,
+            "totalKB": 32
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4964,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.50s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.34s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.12s",
+            "sizeKB": 1
+          },
+          {
+            "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+            "type": "script",
+            "duration": "1.11s",
+            "sizeKB": 14
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.12s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 4 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/otp-login",
+      "slug": "/otp-login",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1312,
+          "formatted": "1.31s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 329,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1663,
+          "formatted": "1.66s"
+        },
+        "totalLoadTime": {
+          "ms": 4615,
+          "formatted": "4.62s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2442,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 9951,
+            "totalKB": 863
+          },
+          "img": {
+            "count": 7,
+            "totalMs": 2618,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1304,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2776,
+            "totalKB": 34
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5314,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.22s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.36s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.07s",
+            "sizeKB": 1
+          },
+          {
+            "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+            "type": "script",
+            "duration": "1.07s",
+            "sizeKB": 14
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.07s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 4 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/dynamic-table",
+      "slug": "/dynamic-table",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1232,
+          "formatted": "1.23s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 323,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1570,
+          "formatted": "1.57s"
+        },
+        "totalLoadTime": {
+          "ms": 4748,
+          "formatted": "4.75s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2038,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8146,
+            "totalKB": 862
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1323,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1744,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 3961,
+            "totalKB": 35
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5545,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.16s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.01s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.00s",
+            "sizeKB": 1
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.00s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 3 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/dynamic-pagination-table",
+      "slug": "/dynamic-pagination-table",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1296,
+          "formatted": "1.30s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 336,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1604,
+          "formatted": "1.60s"
+        },
+        "totalLoadTime": {
+          "ms": 4446,
+          "formatted": "4.45s"
+        },
+        "resources": {
+          "link": {
+            "count": 6,
+            "totalMs": 2928,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 20,
+            "totalMs": 12435,
+            "totalKB": 865
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1289,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1182,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 6,
+            "totalMs": 1613,
+            "totalKB": 25
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4811,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.27s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.08s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/plugins/back-to-top/back-to-top.min.js",
+            "type": "script",
+            "duration": "1.03s",
+            "sizeKB": 2
+          },
+          {
+            "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+            "type": "script",
+            "duration": "1.03s",
+            "sizeKB": 14
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.96s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 4 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/locators",
+      "slug": "/locators",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1464,
+          "formatted": "1.46s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 338,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1675,
+          "formatted": "1.68s"
+        },
+        "totalLoadTime": {
+          "ms": 4087,
+          "formatted": "4.09s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2026,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 9899,
+            "totalKB": 384
+          },
+          "img": {
+            "count": 3,
+            "totalMs": 1943,
+            "totalKB": 4
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1104,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 9,
+            "totalMs": 2793,
+            "totalKB": 39
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4809,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.53s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.19s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.08s",
+            "sizeKB": 1
+          },
+          {
+            "url": "https://practice.expandtesting.com/socket.io/socket.io.min.js",
+            "type": "script",
+            "duration": "1.11s",
+            "sizeKB": 14
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.08s",
+            "sizeKB": 1
+          },
+          {
+            "url": "https://practice.expandtesting.com/img/avatar-blank.jpg",
+            "duration": "0.54s",
+            "sizeKB": 3
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 4 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/my-browser",
+      "slug": "/my-browser",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1252,
+          "formatted": "1.25s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 347,
+          "formatted": "0.35s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1435,
+          "formatted": "1.44s"
+        },
+        "totalLoadTime": {
+          "ms": 4008,
+          "formatted": "4.01s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2357,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8378,
+            "totalKB": 849
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1337,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1190,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2340,
+            "totalKB": 32
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4719,
+            "totalKB": 16
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.23s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.01s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.00s",
+            "sizeKB": 1
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.00s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 3 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/radio-buttons",
+      "slug": "/radio-buttons",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1300,
+          "formatted": "1.30s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 323,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1518,
+          "formatted": "1.52s"
+        },
+        "totalLoadTime": {
+          "ms": 4190,
+          "formatted": "4.19s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1594,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8658,
+            "totalKB": 921
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1392,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 945,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2148,
+            "totalKB": 35
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4610,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.30s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.16s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.05s",
+            "sizeKB": 1
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.05s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 3 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/drag-and-drop",
+      "slug": "/drag-and-drop",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1204,
+          "formatted": "1.20s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 329,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1494,
+          "formatted": "1.49s"
+        },
+        "totalLoadTime": {
+          "ms": 3792,
+          "formatted": "3.79s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1789,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8213,
+            "totalKB": 409
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1172,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1310,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2372,
+            "totalKB": 31
+          },
+          "xmlhttprequest": {
+            "count": 18,
+            "totalMs": 4879,
+            "totalKB": 16
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.41s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.06s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.85s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/drag-and-drop-circles",
+      "slug": "/drag-and-drop-circles",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1256,
+          "formatted": "1.26s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 338,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1346,
+          "formatted": "1.35s"
+        },
+        "totalLoadTime": {
+          "ms": 4143,
+          "formatted": "4.14s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1828,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 8370,
+            "totalKB": 838
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1391,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1179,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 7,
+            "totalMs": 2297,
+            "totalKB": 27
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5639,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.35s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.11s",
+            "sizeKB": 63
+          },
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "type": "img",
+            "duration": "1.05s",
+            "sizeKB": 1
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "1.05s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 3 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/form-validation",
+      "slug": "/form-validation",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1204,
+          "formatted": "1.20s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 339,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1534,
+          "formatted": "1.53s"
+        },
+        "totalLoadTime": {
+          "ms": 4072,
+          "formatted": "4.07s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1824,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 8822,
+            "totalKB": 901
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1246,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1116,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2440,
+            "totalKB": 34
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5168,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.12s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.92s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/upload",
+      "slug": "/upload",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1212,
+          "formatted": "1.21s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 329,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1533,
+          "formatted": "1.53s"
+        },
+        "totalLoadTime": {
+          "ms": 4065,
+          "formatted": "4.07s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1653,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 9214,
+            "totalKB": 464
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1240,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1395,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 3284,
+            "totalKB": 35
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 5143,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.14s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.91s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 16,
+        "internalLinks": 12,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/download",
+      "slug": "/download",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1388,
+          "formatted": "1.39s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 333,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1395,
+          "formatted": "1.40s"
+        },
+        "totalLoadTime": {
+          "ms": 4287,
+          "formatted": "4.29s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 2138,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 9109,
+            "totalKB": 901
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1278,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1439,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 9,
+            "totalMs": 2494,
+            "totalKB": 39
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4793,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.27s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.08s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.95s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 35,
+        "internalLinks": 31,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/add-remove-elements",
+      "slug": "/add-remove-elements",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 3,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1300,
+          "formatted": "1.30s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 339,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1369,
+          "formatted": "1.37s"
+        },
+        "totalLoadTime": {
+          "ms": 3686,
+          "formatted": "3.69s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1611,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 7731,
+            "totalKB": 837
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1304,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 3,
+            "totalMs": 1163,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 7,
+            "totalMs": 1887,
+            "totalKB": 28
+          },
+          "xmlhttprequest": {
+            "count": 18,
+            "totalMs": 5009,
+            "totalKB": 16
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.28s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.10s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.98s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/download-secure",
+      "slug": "/download-secure",
+      "overallScore": 75,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 401,
+        "ok": false,
+        "consoleErrors": 1,
+        "significantErrors": 1,
+        "failedRequests": 0,
+        "criticalFailures": 0,
+        "summary": "HTTP 401",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 604,
+          "formatted": "0.60s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 319,
+          "formatted": "0.32s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 561,
+          "formatted": "0.56s"
+        },
+        "totalLoadTime": {
+          "ms": 563,
+          "formatted": "0.56s"
+        },
+        "resources": {},
+        "slowResources": [],
+        "largeImages": [],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Fully Responsive",
+          "color": "#22c55e",
+          "score": 100,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 0,
+        "internalLinks": 0,
+        "externalLinks": 0,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": false,
+        "headerVisible": false,
+        "footerFound": false,
+        "footerVisible": false,
+        "logoDetected": false,
+        "logoLinksHome": false,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page returned HTTP 401 — users may not be able to access this page."
+        },
+        {
+          "type": "warning",
+          "message": "1 console error(s) detected — may indicate broken functionality."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/notification-message",
+      "slug": "/notification-message",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1592,
+          "formatted": "1.59s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 332,
+          "formatted": "0.33s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1657,
+          "formatted": "1.66s"
+        },
+        "totalLoadTime": {
+          "ms": 4258,
+          "formatted": "4.26s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1523,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 17,
+            "totalMs": 7680,
+            "totalKB": 447
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1223,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 985,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 3887,
+            "totalKB": 35
+          },
+          "xmlhttprequest": {
+            "count": 17,
+            "totalMs": 4608,
+            "totalKB": 15
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.24s",
+            "sizeKB": null
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.90s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Issues",
+          "color": "#ef4444",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 17,
+        "internalLinks": 13,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 1 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    },
+    {
+      "url": "https://practice.expandtesting.com/autocomplete",
+      "slug": "/autocomplete",
+      "overallScore": 82,
+      "grade": {
+        "grade": "B",
+        "label": "Good",
+        "color": "#84cc16"
+      },
+      "health": {
+        "status": 200,
+        "ok": true,
+        "consoleErrors": 0,
+        "significantErrors": 0,
+        "failedRequests": 4,
+        "criticalFailures": 0,
+        "summary": "HTTP 200",
+        "rating": "good"
+      },
+      "performance": {
+        "score": "good",
+        "firstContentfulPaint": {
+          "ms": 1184,
+          "formatted": "1.18s",
+          "grade": {
+            "label": "Fast",
+            "color": "#22c55e"
+          }
+        },
+        "timeToFirstByte": {
+          "ms": 335,
+          "formatted": "0.34s",
+          "grade": {
+            "label": "Acceptable",
+            "color": "#f59e0b"
+          }
+        },
+        "domContentLoaded": {
+          "ms": 1541,
+          "formatted": "1.54s"
+        },
+        "totalLoadTime": {
+          "ms": 3531,
+          "formatted": "3.53s"
+        },
+        "resources": {
+          "link": {
+            "count": 5,
+            "totalMs": 1231,
+            "totalKB": 39
+          },
+          "script": {
+            "count": 18,
+            "totalMs": 8189,
+            "totalKB": 853
+          },
+          "img": {
+            "count": 2,
+            "totalMs": 1223,
+            "totalKB": 1
+          },
+          "fetch": {
+            "count": 4,
+            "totalMs": 1351,
+            "totalKB": 0
+          },
+          "iframe": {
+            "count": 8,
+            "totalMs": 2301,
+            "totalKB": 33
+          },
+          "xmlhttprequest": {
+            "count": 18,
+            "totalMs": 4867,
+            "totalKB": 14
+          }
+        },
+        "slowResources": [
+          {
+            "url": "https://www.googletagmanager.com/gtag/js?id=G-90GRT6N40B",
+            "type": "script",
+            "duration": "1.20s",
+            "sizeKB": null
+          },
+          {
+            "url": "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1056034821646296",
+            "type": "script",
+            "duration": "1.01s",
+            "sizeKB": 63
+          }
+        ],
+        "largeImages": [
+          {
+            "url": "https://practice.expandtesting.com/assets/images/logo.svg",
+            "duration": "0.91s",
+            "sizeKB": 1
+          }
+        ],
+        "issues": [],
+        "recommendations": []
+      },
+      "responsiveness": {
+        "mobile": {
+          "label": "Not Mobile-Ready",
+          "color": "#ef4444",
+          "score": 20,
+          "details": {
+            "viewportWidth": 375,
+            "responsive": false,
+            "hasHorizontalScroll": true,
+            "bodyWidth": 375
+          }
+        },
+        "tablet": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 768,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 768
+          }
+        },
+        "desktop": {
+          "label": "Responsive",
+          "color": "#22c55e",
+          "details": {
+            "viewportWidth": 1440,
+            "responsive": true,
+            "hasHorizontalScroll": false,
+            "bodyWidth": 1440
+          }
+        }
+      },
+      "navigation": {
+        "health": {
+          "label": "All Links Working",
+          "color": "#22c55e"
+        },
+        "severity": "low",
+        "totalLinks": 15,
+        "internalLinks": 11,
+        "externalLinks": 4,
+        "brokenLinks": [],
+        "protectedLinks": [],
+        "issues": [],
+        "insight": "All navigation links are functional and properly structured."
+      },
+      "layout": {
+        "headerFound": true,
+        "headerVisible": true,
+        "footerFound": true,
+        "footerVisible": true,
+        "logoDetected": true,
+        "logoLinksHome": true,
+        "ctaCount": 0,
+        "ctaTexts": []
+      },
+      "findings": [
+        {
+          "type": "critical",
+          "message": "Page is NOT mobile-responsive — failing on the majority of today's web traffic."
+        },
+        {
+          "type": "info",
+          "message": "No clear call-to-action buttons detected — missed conversion opportunity."
+        }
+      ],
+      "opportunities": [
+        "Optimise 2 slow-loading resource(s) to improve page speed.",
+        "Implement responsive CSS breakpoints for mobile devices (375px viewport).",
+        "Add prominent CTA buttons to drive user engagement and conversions."
+      ]
+    }
+  ],
+  "opportunitySummary": {
+    "title": "Growth Opportunities Identified",
+    "description": "Addressing these items can directly impact your search rankings, page speed, and user engagement.",
+    "items": [
+      {
+        "id": 1,
+        "opportunity": "Optimise 1 slow-loading resource(s) to improve page speed."
+      },
+      {
+        "id": 2,
+        "opportunity": "Implement responsive CSS breakpoints for mobile devices (375px viewport)."
+      },
+      {
+        "id": 3,
+        "opportunity": "Add prominent CTA buttons to drive user engagement and conversions."
+      },
+      {
+        "id": 4,
+        "opportunity": "Audit and fix anchor-based navigation links."
+      },
+      {
+        "id": 5,
+        "opportunity": "Optimise 2 slow-loading resource(s) to improve page speed."
+      },
+      {
+        "id": 6,
+        "opportunity": "Optimise 3 slow-loading resource(s) to improve page speed."
+      },
+      {
+        "id": 7,
+        "opportunity": "Optimise 4 slow-loading resource(s) to improve page speed."
+      }
+    ]
+  },
+  "categoryScorecard": {
+    "title": "How Your Site Performs by Category",
+    "categories": [
+      {
+        "name": "Page Health",
+        "description": "HTTP status, server errors, and critical failures",
+        "score": 96,
+        "grade": {
+          "grade": "A",
+          "label": "Excellent",
+          "color": "#22c55e"
+        }
+      },
+      {
+        "name": "Page Speed",
+        "description": "First Contentful Paint, TTFB, and load times",
+        "score": 97,
+        "grade": {
+          "grade": "A",
+          "label": "Excellent",
+          "color": "#22c55e"
+        }
+      },
+      {
+        "name": "Mobile Experience",
+        "description": "Responsiveness across mobile, tablet, and desktop",
+        "score": 26,
+        "grade": {
+          "grade": "F",
+          "label": "Critical Issues",
+          "color": "#ef4444"
+        }
+      },
+      {
+        "name": "Navigation & Links",
+        "description": "Broken links, anchor integrity, and link structure",
+        "score": 99,
+        "grade": {
+          "grade": "A",
+          "label": "Excellent",
+          "color": "#22c55e"
+        }
+      },
+      {
+        "name": "Layout & UX",
+        "description": "Header, footer, logo, and call-to-action presence",
+        "score": 70,
+        "grade": {
+          "grade": "C",
+          "label": "Fair",
+          "color": "#f59e0b"
+        }
+      }
+    ]
+  }
+}

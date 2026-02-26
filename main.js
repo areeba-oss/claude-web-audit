@@ -2,7 +2,8 @@
 const fetchAllPages        = require('./fetchAllPages');
 const basicHealthCheck     = require('./basicHealthCheck');
 const uiLayoutValidation   = require('./uiLayoutValidation');
-const navigationLinksAudit = require('./navigationLinksAudit');
+// const navigationLinksAudit = require('./navigationLinksAudit');
+const navigationLinksAuditReduced = require('./navigationLinksAudit');
 const formsAudit           = require('./formsAudit');
 const ecommerceAudit       = require('./ecommerceAudit');
 const performanceAudit     = require('./performanceAudit');
@@ -137,7 +138,7 @@ async function auditPage(browser, url) {
         const [health, uiLayout, navigation, forms, ecommerce, performance] = await Promise.all([
             basicHealthCheck(page, url, { httpStatus, consoleErrors, consoleWarnings, failedRequests }, aiResult),
             uiLayoutValidation(page, url, aiResult),
-            navigationLinksAudit(page, url, aiResult, linkData),
+            navigationLinksAuditReduced(page, url, aiResult, linkData),
             formsAudit(page, url, aiResult),
             ecommerceAudit(browser, page, url, aiResult),
             performanceAudit(page, url, aiResult, perfRaw)
