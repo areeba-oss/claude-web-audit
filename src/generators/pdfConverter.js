@@ -5,7 +5,7 @@
 const fs = require('fs');
 const https = require('https');
 
-function convertToPDF(htmlContent, outPath = 'report-final/report.pdf') {
+function convertToPDF(htmlContent, outPath = 'outputs/report-final/report.pdf') {
   return new Promise((resolve, reject) => {
     const data = JSON.stringify({ html: htmlContent });
 

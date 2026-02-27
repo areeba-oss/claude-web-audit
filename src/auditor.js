@@ -398,7 +398,7 @@ async function main(inputUrl) {
   await browser.close();
   printSummary(results);
 
-  const file = 'raw-json/results.json';
+  const file = 'outputs/raw-json/results.json';
   await fs.writeFile(file, JSON.stringify(results, null, 2), 'utf-8');
 
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);

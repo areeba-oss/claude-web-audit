@@ -855,11 +855,11 @@ if (!inputPath) {
   process.exit(1);
 }
 
-const raw = JSON.parse(fs.readFileSync(`raw-json/${inputPath}`, 'utf8'));
+const raw = JSON.parse(fs.readFileSync(`outputs/raw-json/${inputPath}`, 'utf8'));
 const pages = Array.isArray(raw) ? raw : [raw];
 const report = buildReport(pages);
 
-const outFile = 'report-json/report.json';
+const outFile = 'outputs/report-json/report.json';
 fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
 
 console.log(`✅  Report written to: ${outFile}`);

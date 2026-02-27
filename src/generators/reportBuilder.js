@@ -60,15 +60,15 @@ function buildReportHTML(report, includePageBreakdown = true) {
 
 /**
  * Generate PDF report from JSON data
- * @param {string} jsonPath - Path to input JSON file (relative to report-json/)
- * @param {string} outputPath - Path for output PDF (relative to report-final/)
+ * @param {string} jsonPath - Path to input JSON file (relative to outputs/report-json/)
+ * @param {string} outputPath - Path for output PDF (relative to outputs/report-final/)
  * @param {boolean} includePageBreakdown - Whether to include page breakdown section
  */
 async function generateReport(jsonPath, outputPath, includePageBreakdown = true) {
-  const report = JSON.parse(fs.readFileSync(`report-json/${jsonPath}`, 'utf8'));
+  const report = JSON.parse(fs.readFileSync(`outputs/report-json/${jsonPath}`, 'utf8'));
   const html = buildReportHTML(report, includePageBreakdown);
 
-  fs.mkdirSync('report-final', { recursive: true });
+  fs.mkdirSync('outputs/report-final', { recursive: true });
 
   const reportType = includePageBreakdown ? 'Full' : 'Mini';
   const pageCount = includePageBreakdown
@@ -78,7 +78,7 @@ async function generateReport(jsonPath, outputPath, includePageBreakdown = true)
   console.log(`✅  ${reportType} report generated`);
   console.log(`📄  ${pageCount} (${includePageBreakdown ? 'with' : 'without'} page breakdown)`);
 
-  await convertToPDF(html, `report-final/${outputPath}`);
+  await convertToPDF(html, `outputs/report-final/${outputPath}`);
 }
 
 module.exports = { buildReportHTML, generateReport };
