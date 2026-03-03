@@ -401,8 +401,21 @@ function transformPage(raw) {
   };
 
   // --- Forms ---
+  const formsList = (formsRaw.forms ?? []).map((f) => ({
+    index: f.index,
+    fieldCount: f.fieldCount ?? 0,
+    purpose: f.purpose ?? 'unknown',
+    isCritical: f.isCritical ?? false,
+    hasSubmitBtn: f.hasSubmitBtn ?? false,
+    hasEmailField: f.hasEmailField ?? false,
+    hasRequiredFields: f.hasRequiredFields ?? false,
+    browserValidationActive: f.browserValidationActive ?? false,
+    criticalMissingValidation: f.criticalMissingValidation ?? [],
+    detectionMethod: f.detectionMethod ?? 'unknown',
+  }));
   const forms = {
     count: formsRaw.formCount ?? 0,
+    forms: formsList,
   };
 
   // --- Score ---
@@ -721,6 +734,191 @@ function buildSummary(pages) {
   };
 }
 
+// ─── Form Validation Summary Builder ─────────────────────────────────────────
+
+function buildFormValidationSummary(pages) {
+  const pagesWithForms = pages.filter((p) => p.forms.count > 0);
+  const totalForms = pagesWithForms.reduce((a, p) => a + p.forms.count, 0);
+  const allForms = pagesWithForms.flatMap((p) =>
+    p.forms.forms.map((f) => ({ ...f, pageUrl: p.url, pageSlug: p.slug })),
+  );
+
+  const withSubmit = allForms.filter((f) => f.hasSubmitBtn).length;
+  const withEmail = allForms.filter((f) => f.hasEmailField).length;
+  const withRequired = allForms.filter((f) => f.hasRequiredFields).length;
+  const withBrowserValidation = allForms.filter((f) => f.browserValidationActive).length;
+  const withMissingValidation = allForms.filter((f) => f.criticalMissingValidation.length > 0);
+
+  const issues = [];
+  allForms.forEach((f) => {
+    if (!f.hasSubmitBtn)
+      issues.push({
+        severity: 'warning',
+        page: f.pageSlug,
+        message: 'Form has no submit button — users may not know how to submit.',
+      });
+    if (!f.hasRequiredFields && f.fieldCount > 1)
+      issues.push({
+        severity: 'warning',
+        page: f.pageSlug,
+        message: 'Form fields lack required attribute — incomplete submissions possible.',
+      });
+    if (!f.browserValidationActive && f.fieldCount > 1)
+      issues.push({
+        severity: 'info',
+        page: f.pageSlug,
+        message: 'Browser validation not active — client-side checks may be missing.',
+      });
+    if (f.criticalMissingValidation.length > 0)
+      issues.push({
+        severity: 'critical',
+        page: f.pageSlug,
+        message: `Missing critical validation: ${f.criticalMissingValidation.join(', ')}`,
+      });
+  });
+
+  return {
+    totalPages: pagesWithForms.length,
+    totalForms,
+    stats: {
+      withSubmitButton: withSubmit,
+      withEmailField: withEmail,
+      withRequiredFields: withRequired,
+      withBrowserValidation: withBrowserValidation,
+      withMissingValidation: withMissingValidation.length,
+    },
+    forms: allForms.map((f) => ({
+      page: f.pageSlug,
+      pageUrl: f.pageUrl,
+      fieldCount: f.fieldCount,
+      purpose: f.purpose,
+      hasSubmitBtn: f.hasSubmitBtn,
+      hasEmailField: f.hasEmailField,
+      hasRequiredFields: f.hasRequiredFields,
+      browserValidationActive: f.browserValidationActive,
+      criticalMissingValidation: f.criticalMissingValidation,
+    })),
+    issues: issues.sort((a, b) => {
+      const order = { critical: 0, warning: 1, info: 2 };
+      return (order[a.severity] ?? 3) - (order[b.severity] ?? 3);
+    }),
+  };
+}
+
+// ─── UI/UX Issues Builder ────────────────────────────────────────────────────
+
+function buildUiUxIssues(pages) {
+  const issues = [];
+
+  pages.forEach((p) => {
+    const slug = p.slug;
+    const url = p.url;
+
+    // Header / Footer / Logo
+    if (!p.layout.headerVisible)
+      issues.push({
+        category: 'Layout',
+        severity: 'critical',
+        page: slug,
+        url,
+        title: 'Missing Header Navigation',
+        description: `The page at ${slug} has no visible header or navigation bar. Users cannot navigate to other sections of the site, leading to high bounce rates and poor user experience.`,
+      });
+    if (!p.layout.footerVisible)
+      issues.push({
+        category: 'Layout',
+        severity: 'warning',
+        page: slug,
+        url,
+        title: 'Missing Footer',
+        description: `No footer is visible on ${slug}. Footers provide essential links, legal information, and trust signals. Their absence creates an incomplete page structure.`,
+      });
+    if (!p.layout.logoDetected)
+      issues.push({
+        category: 'Branding',
+        severity: 'info',
+        page: slug,
+        url,
+        title: 'No Logo Detected',
+        description: `The page ${slug} does not display a visible logo. Logos reinforce brand identity and provide a consistent home link for users.`,
+      });
+    if (p.layout.logoDetected && !p.layout.logoLinksHome)
+      issues.push({
+        category: 'Navigation',
+        severity: 'warning',
+        page: slug,
+        url,
+        title: 'Logo Does Not Link to Homepage',
+        description: `The logo on ${slug} is visible but does not link back to the homepage. This breaks a common web convention that users expect.`,
+      });
+
+    // CTAs
+    if (p.layout.ctaCount === 0)
+      issues.push({
+        category: 'Conversions',
+        severity: 'warning',
+        page: slug,
+        url,
+        title: 'No Call-to-Action Found',
+        description: `No CTA buttons or links were detected on ${slug}. Without clear calls to action, visitors have no guided path to convert, resulting in missed leads and revenue.`,
+      });
+
+    // Responsiveness
+    const resp = p.responsiveness;
+    if (resp.mobile?.details && !resp.mobile.details.responsive)
+      issues.push({
+        category: 'Responsiveness',
+        severity: 'critical',
+        page: slug,
+        url,
+        title: 'Not Mobile Responsive',
+        description: `The page ${slug} is not responsive at 375px (mobile). Content overflows the viewport with horizontal scrolling, making it unusable on smartphones which account for over 60% of web traffic.`,
+      });
+    if (resp.tablet?.details && !resp.tablet.details.responsive)
+      issues.push({
+        category: 'Responsiveness',
+        severity: 'warning',
+        page: slug,
+        url,
+        title: 'Tablet Layout Issues',
+        description: `At 768px (tablet), ${slug} displays layout problems. Elements may be clipped or misaligned, impacting the growing tablet user segment.`,
+      });
+  });
+
+  // Deduplicate similar issues across pages (group by title)
+  const grouped = {};
+  issues.forEach((issue) => {
+    const key = issue.title;
+    if (!grouped[key]) {
+      grouped[key] = { ...issue, affectedPages: [issue.page] };
+    } else {
+      grouped[key].affectedPages.push(issue.page);
+    }
+  });
+
+  const deduplicated = Object.values(grouped).map((g) => ({
+    ...g,
+    pageCount: g.affectedPages.length,
+    description:
+      g.affectedPages.length > 1
+        ? `${g.description.split('.')[0]}. This issue affects ${g.affectedPages.length} pages: ${g.affectedPages.slice(0, 4).join(', ')}${g.affectedPages.length > 4 ? ` and ${g.affectedPages.length - 4} more` : ''}.`
+        : g.description,
+  }));
+
+  // Sort: critical first, then by page count
+  deduplicated.sort((a, b) => {
+    const order = { critical: 0, warning: 1, info: 2 };
+    const sevDiff = (order[a.severity] ?? 3) - (order[b.severity] ?? 3);
+    if (sevDiff !== 0) return sevDiff;
+    return b.pageCount - a.pageCount;
+  });
+
+  return {
+    totalIssues: deduplicated.length,
+    issues: deduplicated,
+  };
+}
+
 // ─── Report Builder ──────────────────────────────────────────────────────────
 
 function buildReport(rawPages) {
@@ -791,6 +989,8 @@ function buildReport(rawPages) {
         'The issues identified are actionable improvements that can increase search rankings, improve user experience, and drive more conversions.',
     },
     pageBreakdown: transformed,
+    formValidationSummary: buildFormValidationSummary(transformed),
+    uiUxIssues: buildUiUxIssues(transformed),
     opportunitySummary: {
       title: 'Growth Opportunities Identified',
       description:
@@ -847,30 +1047,32 @@ function buildReport(rawPages) {
   };
 }
 
-// ─── CLI Entry ───────────────────────────────────────────────────────────────
+module.exports = { buildReport };
 
-const inputPath = process.argv[2];
-if (!inputPath) {
-  console.error('Usage: npm run report <input.json>');
-  process.exit(1);
+// ─── CLI entry ───────────────────────────────────────────────────────────────
+if (require.main === module) {
+  const inputPath = process.argv[2];
+  if (!inputPath) {
+    console.error('Usage: npm run report <input.json>');
+    process.exit(1);
+  }
+
+  const raw = JSON.parse(fs.readFileSync(`outputs/raw-json/${inputPath}`, 'utf8'));
+  const pages = Array.isArray(raw) ? raw : [raw];
+  const report = buildReport(pages);
+
+  const outFile = 'outputs/report-json/report.json';
+  fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
+
+  console.log(`✅  Report written to: ${outFile}`);
+  console.log(`📊  Pages processed: ${report.meta.auditedPages}`);
+  console.log(
+    `🏆  Overall score: ${report.executiveSummary.overallScore}/100 (${report.executiveSummary.grade.grade})`,
+  );
+
+  const scores = report.pageBreakdown.map((p) => p.overallScore).sort((a, b) => a - b);
+  console.log(
+    `📈  Score range: ${scores[0]}–${scores[scores.length - 1]} | Spread: ${scores[scores.length - 1] - scores[0]} pts`,
+  );
+  console.log(`    Scores: ${scores.join(', ')}`);
 }
-
-const raw = JSON.parse(fs.readFileSync(`outputs/raw-json/${inputPath}`, 'utf8'));
-const pages = Array.isArray(raw) ? raw : [raw];
-const report = buildReport(pages);
-
-const outFile = 'outputs/report-json/report.json';
-fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
-
-console.log(`✅  Report written to: ${outFile}`);
-console.log(`📊  Pages processed: ${report.meta.auditedPages}`);
-console.log(
-  `🏆  Overall score: ${report.executiveSummary.overallScore}/100 (${report.executiveSummary.grade.grade})`,
-);
-
-// Print score distribution for verification
-const scores = report.pageBreakdown.map((p) => p.overallScore).sort((a, b) => a - b);
-console.log(
-  `📈  Score range: ${scores[0]}–${scores[scores.length - 1]} | Spread: ${scores[scores.length - 1] - scores[0]} pts`,
-);
-console.log(`    Scores: ${scores.join(', ')}`);

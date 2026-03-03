@@ -2,7 +2,7 @@
   "meta": {
     "reportTitle": "Web Audit Report — practice.expandtesting.com",
     "domain": "practice.expandtesting.com",
-    "generatedAt": "2026-02-26T21:47:03.784Z",
+    "generatedAt": "2026-03-03T15:39:14.449Z",
     "auditedPages": 25,
     "tool": "Expand Testing Web Auditor",
     "version": "1.0"
@@ -172,7 +172,9 @@
         "blankScreen": false,
         "consoleErrors": 1,
         "significantErrors": 1,
-        "significantErrorMessages": ["Error: <svg> attribute width: Expected length, \"auto\"."],
+        "significantErrorMessages": [
+          "Error: <svg> attribute width: Expected length, \"auto\"."
+        ],
         "failedRequests": 24,
         "criticalFailures": 0,
         "summary": "HTTP 200",
@@ -353,7 +355,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -586,7 +589,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -806,7 +810,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -1006,7 +1011,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 1,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": false,
+            "hasRequiredFields": false,
+            "browserValidationActive": false,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -1227,7 +1246,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -1455,7 +1475,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 1,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": false,
+            "hasEmailField": true,
+            "hasRequiredFields": true,
+            "browserValidationActive": true,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -1669,7 +1703,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -1900,7 +1935,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 2,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": false,
+            "hasRequiredFields": false,
+            "browserValidationActive": false,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -2119,7 +2168,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 3,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": false,
+            "hasRequiredFields": false,
+            "browserValidationActive": false,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -2330,7 +2393,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 1,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": true,
+            "hasRequiredFields": true,
+            "browserValidationActive": true,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -2556,7 +2633,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 1,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": true,
+            "hasRequiredFields": true,
+            "browserValidationActive": true,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -2772,7 +2863,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -2977,7 +3069,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -3207,7 +3300,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -3420,7 +3514,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -3622,7 +3717,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -3833,7 +3929,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -4037,7 +4134,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -4236,7 +4334,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 4,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": false,
+            "hasRequiredFields": true,
+            "browserValidationActive": true,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -4436,7 +4548,21 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 1
+        "count": 1,
+        "forms": [
+          {
+            "index": 0,
+            "fieldCount": 1,
+            "purpose": "unknown",
+            "isCritical": true,
+            "hasSubmitBtn": true,
+            "hasEmailField": false,
+            "hasRequiredFields": true,
+            "browserValidationActive": true,
+            "criticalMissingValidation": [],
+            "detectionMethod": "fallback"
+          }
+        ]
       },
       "findings": [
         {
@@ -4642,7 +4768,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -4852,7 +4979,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -5014,7 +5142,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -5229,7 +5358,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -5439,7 +5569,8 @@
         "ctaTexts": []
       },
       "forms": {
-        "count": 0
+        "count": 0,
+        "forms": []
       },
       "findings": [
         {
@@ -5487,6 +5618,278 @@
       ]
     }
   ],
+  "formValidationSummary": {
+    "totalPages": 8,
+    "totalForms": 8,
+    "stats": {
+      "withSubmitButton": 7,
+      "withEmailField": 3,
+      "withRequiredFields": 5,
+      "withBrowserValidation": 5,
+      "withMissingValidation": 0
+    },
+    "forms": [
+      {
+        "page": "/notes/api/api-docs",
+        "pageUrl": "https://practice.expandtesting.com/notes/api/api-docs",
+        "fieldCount": 1,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": false,
+        "hasRequiredFields": false,
+        "browserValidationActive": false,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/xpath-css-tester",
+        "pageUrl": "https://practice.expandtesting.com/xpath-css-tester",
+        "fieldCount": 1,
+        "purpose": "unknown",
+        "hasSubmitBtn": false,
+        "hasEmailField": true,
+        "hasRequiredFields": true,
+        "browserValidationActive": true,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/login",
+        "pageUrl": "https://practice.expandtesting.com/login",
+        "fieldCount": 2,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": false,
+        "hasRequiredFields": false,
+        "browserValidationActive": false,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/register",
+        "pageUrl": "https://practice.expandtesting.com/register",
+        "fieldCount": 3,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": false,
+        "hasRequiredFields": false,
+        "browserValidationActive": false,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/forgot-password",
+        "pageUrl": "https://practice.expandtesting.com/forgot-password",
+        "fieldCount": 1,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": true,
+        "hasRequiredFields": true,
+        "browserValidationActive": true,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/otp-login",
+        "pageUrl": "https://practice.expandtesting.com/otp-login",
+        "fieldCount": 1,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": true,
+        "hasRequiredFields": true,
+        "browserValidationActive": true,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/form-validation",
+        "pageUrl": "https://practice.expandtesting.com/form-validation",
+        "fieldCount": 4,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": false,
+        "hasRequiredFields": true,
+        "browserValidationActive": true,
+        "criticalMissingValidation": []
+      },
+      {
+        "page": "/upload",
+        "pageUrl": "https://practice.expandtesting.com/upload",
+        "fieldCount": 1,
+        "purpose": "unknown",
+        "hasSubmitBtn": true,
+        "hasEmailField": false,
+        "hasRequiredFields": true,
+        "browserValidationActive": true,
+        "criticalMissingValidation": []
+      }
+    ],
+    "issues": [
+      {
+        "severity": "warning",
+        "page": "/xpath-css-tester",
+        "message": "Form has no submit button — users may not know how to submit."
+      },
+      {
+        "severity": "warning",
+        "page": "/login",
+        "message": "Form fields lack required attribute — incomplete submissions possible."
+      },
+      {
+        "severity": "warning",
+        "page": "/register",
+        "message": "Form fields lack required attribute — incomplete submissions possible."
+      },
+      {
+        "severity": "info",
+        "page": "/login",
+        "message": "Browser validation not active — client-side checks may be missing."
+      },
+      {
+        "severity": "info",
+        "page": "/register",
+        "message": "Browser validation not active — client-side checks may be missing."
+      }
+    ]
+  },
+  "uiUxIssues": {
+    "totalIssues": 7,
+    "issues": [
+      {
+        "category": "Responsiveness",
+        "severity": "critical",
+        "page": "/",
+        "url": "https://practice.expandtesting.com/",
+        "title": "Not Mobile Responsive",
+        "description": "The page / is not responsive at 375px (mobile). This issue affects 23 pages: /, /tips, /test-cases, /about and 19 more.",
+        "affectedPages": [
+          "/",
+          "/tips",
+          "/test-cases",
+          "/about",
+          "/xpath-css-tester",
+          "/inputs",
+          "/login",
+          "/register",
+          "/forgot-password",
+          "/otp-login",
+          "/dynamic-table",
+          "/dynamic-pagination-table",
+          "/locators",
+          "/my-browser",
+          "/radio-buttons",
+          "/drag-and-drop",
+          "/drag-and-drop-circles",
+          "/form-validation",
+          "/upload",
+          "/download",
+          "/add-remove-elements",
+          "/notification-message",
+          "/autocomplete"
+        ],
+        "pageCount": 23
+      },
+      {
+        "category": "Layout",
+        "severity": "critical",
+        "page": "/notes/api/api-docs",
+        "url": "https://practice.expandtesting.com/notes/api/api-docs",
+        "title": "Missing Header Navigation",
+        "description": "The page at /notes/api/api-docs has no visible header or navigation bar. This issue affects 2 pages: /notes/api/api-docs, /download-secure.",
+        "affectedPages": [
+          "/notes/api/api-docs",
+          "/download-secure"
+        ],
+        "pageCount": 2
+      },
+      {
+        "category": "Conversions",
+        "severity": "warning",
+        "page": "/",
+        "url": "https://practice.expandtesting.com/",
+        "title": "No Call-to-Action Found",
+        "description": "No CTA buttons or links were detected on /. This issue affects 25 pages: /, /tips, /test-cases, /notes/api/api-docs and 21 more.",
+        "affectedPages": [
+          "/",
+          "/tips",
+          "/test-cases",
+          "/notes/api/api-docs",
+          "/about",
+          "/xpath-css-tester",
+          "/inputs",
+          "/login",
+          "/register",
+          "/forgot-password",
+          "/otp-login",
+          "/dynamic-table",
+          "/dynamic-pagination-table",
+          "/locators",
+          "/my-browser",
+          "/radio-buttons",
+          "/drag-and-drop",
+          "/drag-and-drop-circles",
+          "/form-validation",
+          "/upload",
+          "/download",
+          "/add-remove-elements",
+          "/download-secure",
+          "/notification-message",
+          "/autocomplete"
+        ],
+        "pageCount": 25
+      },
+      {
+        "category": "Responsiveness",
+        "severity": "warning",
+        "page": "/",
+        "url": "https://practice.expandtesting.com/",
+        "title": "Tablet Layout Issues",
+        "description": "At 768px (tablet), / displays layout problems. This issue affects 8 pages: /, /tips, /about, /inputs and 4 more.",
+        "affectedPages": [
+          "/",
+          "/tips",
+          "/about",
+          "/inputs",
+          "/login",
+          "/forgot-password",
+          "/dynamic-pagination-table",
+          "/locators"
+        ],
+        "pageCount": 8
+      },
+      {
+        "category": "Layout",
+        "severity": "warning",
+        "page": "/notes/api/api-docs",
+        "url": "https://practice.expandtesting.com/notes/api/api-docs",
+        "title": "Missing Footer",
+        "description": "No footer is visible on /notes/api/api-docs. This issue affects 2 pages: /notes/api/api-docs, /download-secure.",
+        "affectedPages": [
+          "/notes/api/api-docs",
+          "/download-secure"
+        ],
+        "pageCount": 2
+      },
+      {
+        "category": "Navigation",
+        "severity": "warning",
+        "page": "/notes/api/api-docs",
+        "url": "https://practice.expandtesting.com/notes/api/api-docs",
+        "title": "Logo Does Not Link to Homepage",
+        "description": "The logo on /notes/api/api-docs is visible but does not link back to the homepage. This breaks a common web convention that users expect.",
+        "affectedPages": [
+          "/notes/api/api-docs"
+        ],
+        "pageCount": 1
+      },
+      {
+        "category": "Branding",
+        "severity": "info",
+        "page": "/download-secure",
+        "url": "https://practice.expandtesting.com/download-secure",
+        "title": "No Logo Detected",
+        "description": "The page /download-secure does not display a visible logo. Logos reinforce brand identity and provide a consistent home link for users.",
+        "affectedPages": [
+          "/download-secure"
+        ],
+        "pageCount": 1
+      }
+    ]
+  },
   "opportunitySummary": {
     "title": "Growth Opportunities Identified",
     "description": "Addressing these items can directly impact your search rankings, page speed, and user engagement.",

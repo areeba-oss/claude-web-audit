@@ -359,7 +359,13 @@ function printSummary(results) {
   console.log('  ────────────────────────────────────────────────────\n');
 }
 
-async function main(inputUrl) {
+/**
+ * Core audit runner — usable both from CLI and the API server.
+ * @param {string} inputUrl  Homepage or any URL to audit
+ * @param {number} maxPages  Max pages to crawl (default 25)
+ * @returns {Promise<Array>} Raw audit results array
+ */
+async function runAudit(inputUrl, maxPages = 25) {
   const startTime = Date.now();
   console.log('╔════════════════════════════════════════════════════════╗');
   console.log('║               🔍  WEB AUDIT STARTING                  ║');
@@ -373,7 +379,7 @@ async function main(inputUrl) {
   let urls = [];
   if (isHomepage(inputUrl)) {
     console.log('\n━━━ Phase 1: Crawl ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    const { allPages, stats } = await fetchAllPages(inputUrl, 25);
+    const { allPages, stats } = await fetchAllPages(inputUrl, maxPages);
     console.log(
       `  Found ${allPages.size} pages (visited:${stats.visited} skipped:${stats.skipped} errors:${stats.errored})`,
     );
@@ -398,25 +404,31 @@ async function main(inputUrl) {
   await browser.close();
   printSummary(results);
 
-  const file = 'outputs/raw-json/results.json';
-  await fs.writeFile(file, JSON.stringify(results, null, 2), 'utf-8');
-
   const elapsed = ((Date.now() - startTime) / 1000).toFixed(1);
-
-  console.log(`  💾 Saved → ${file}`);
   console.log(`  ⏱  Total time: ${elapsed}s\n`);
+
+  return results;
 }
 
-const inputUrl = process.argv[2];
+module.exports = { runAudit };
 
-if (!inputUrl) {
-  console.error('Usage: npm run audit <https://example.com>');
-  process.exit(1);
-}
-
-main(inputUrl)
-  .then(() => process.exit(0))
-  .catch((err) => {
-    console.error(err);
+// ─── CLI entry ───────────────────────────────────────────────────────────────
+if (require.main === module) {
+  const inputUrl = process.argv[2];
+  if (!inputUrl) {
+    console.error('Usage: npm run audit <https://example.com>');
     process.exit(1);
-  });
+  }
+
+  runAudit(inputUrl)
+    .then(async (results) => {
+      const file = 'outputs/raw-json/results.json';
+      await fs.writeFile(file, JSON.stringify(results, null, 2), 'utf-8');
+      console.log(`  💾 Saved → ${file}\n`);
+      process.exit(0);
+    })
+    .catch((err) => {
+      console.error(err);
+      process.exit(1);
+    });
+}

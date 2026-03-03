@@ -6,11 +6,13 @@
 const fs = require('fs');
 const { getStyles } = require('./styles');
 const {
+  initCoverImage,
   coverPage,
   executiveSummaryPage,
-  scorecardPage,
-  opportunitiesPage,
+  scorecardAndOpportunitiesPage,
   pageBreakdownPages,
+  formValidationPages,
+  uiUxPages,
   closingPage,
 } = require('./pages');
 const { convertToPDF } = require('./pdfConverter');
@@ -18,11 +20,23 @@ const { convertToPDF } = require('./pdfConverter');
 /**
  * Build complete HTML report
  * @param {Object} report - Report data
- * @param {boolean} includePageBreakdown - Whether to include page breakdown section
+ * @param {Object} options
+ * @param {boolean} [options.includePageBreakdown=true] - Whether to include page breakdown section
+ * @param {number}  [options.maxPages=6]   - Max pages shown in page breakdown
+ * @param {number}  [options.maxImages=4]  - Max screenshot placeholders in UI/UX section
  * @returns {string} Complete HTML document
  */
-function buildReportHTML(report, includePageBreakdown = true) {
-  const { meta, executiveSummary, pageBreakdown, opportunitySummary, categoryScorecard } = report;
+function buildReportHTML(report, options = {}) {
+  const { includePageBreakdown = true, maxPages = 6, maxImages = 4 } = options;
+  const {
+    meta,
+    executiveSummary,
+    pageBreakdown,
+    opportunitySummary,
+    categoryScorecard,
+    formValidationSummary,
+    uiUxIssues,
+  } = report;
   const generatedDate = new Date(meta.generatedAt).toLocaleDateString('en-GB', {
     day: 'numeric',
     month: 'long',
@@ -32,12 +46,13 @@ function buildReportHTML(report, includePageBreakdown = true) {
   const pages = [
     coverPage(meta, executiveSummary, generatedDate),
     executiveSummaryPage(meta, executiveSummary, generatedDate),
-    scorecardPage(meta, categoryScorecard, generatedDate),
-    opportunitiesPage(meta, opportunitySummary, generatedDate),
+    scorecardAndOpportunitiesPage(meta, categoryScorecard, opportunitySummary, generatedDate),
   ];
 
   if (includePageBreakdown) {
-    pages.push(pageBreakdownPages(meta, pageBreakdown, generatedDate));
+    pages.push(pageBreakdownPages(meta, pageBreakdown, generatedDate, maxPages));
+    pages.push(formValidationPages(meta, formValidationSummary, generatedDate));
+    pages.push(uiUxPages(meta, uiUxIssues, generatedDate, maxImages));
   }
 
   pages.push(closingPage(meta, executiveSummary));
@@ -62,18 +77,26 @@ function buildReportHTML(report, includePageBreakdown = true) {
  * Generate PDF report from JSON data
  * @param {string} jsonPath - Path to input JSON file (relative to outputs/report-json/)
  * @param {string} outputPath - Path for output PDF (relative to outputs/report-final/)
- * @param {boolean} includePageBreakdown - Whether to include page breakdown section
+ * @param {Object} options
+ * @param {boolean} [options.includePageBreakdown=true]
+ * @param {number}  [options.maxPages=6]
+ * @param {number}  [options.maxImages=4]
  */
-async function generateReport(jsonPath, outputPath, includePageBreakdown = true) {
+async function generateReport(jsonPath, outputPath, options = {}) {
+  const { includePageBreakdown = true, maxPages = 6, maxImages = 4 } = options;
+  await initCoverImage();
   const report = JSON.parse(fs.readFileSync(`outputs/report-json/${jsonPath}`, 'utf8'));
-  const html = buildReportHTML(report, includePageBreakdown);
+  const html = buildReportHTML(report, { includePageBreakdown, maxPages, maxImages });
 
   fs.mkdirSync('outputs/report-final', { recursive: true });
 
   const reportType = includePageBreakdown ? 'Full' : 'Mini';
+  const breakdownPages = Math.ceil(Math.min(report.pageBreakdown.length, maxPages) / 3);
+  const formPages = 1;
+  const uiuxPageCount = 2;
   const pageCount = includePageBreakdown
-    ? `${5 + Math.ceil(report.pageBreakdown.length / 2)} pages`
-    : '5 pages';
+    ? `${4 + breakdownPages + formPages + uiuxPageCount} pages`
+    : '4 pages';
 
   console.log(`✅  ${reportType} report generated`);
   console.log(`📄  ${pageCount} (${includePageBreakdown ? 'with' : 'without'} page breakdown)`);

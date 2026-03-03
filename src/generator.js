@@ -25,7 +25,7 @@ if (!['full', 'mini'].includes(normalizedType)) {
 const isFull = normalizedType === 'full';
 const outputFile = isFull ? 'report.pdf' : 'report-mini.pdf';
 
-generateReport(inputPath, outputFile, isFull).catch((err) => {
+generateReport(inputPath, outputFile, { includePageBreakdown: isFull }).catch((err) => {
   console.error('Failed to generate report:', err.message);
   process.exit(1);
 });

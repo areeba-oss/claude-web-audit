@@ -1,69 +1,53 @@
 /**
  * pages.js — Full-page HTML sections: cover, executive summary,
- *            scorecard, opportunities, page breakdown, closing.
+ *            scorecard, opportunities, page breakdown, form validation,
+ *            UI/UX issues, and closing.
  */
 
+const path = require('path');
 const { scoreRing, categoryBar, pageCard, pageHeaderBar, pageFooterBar } = require('./components');
 
-// ─── Cover Page ──────────────────────────────────────────────────────────────
+// Populated by initCoverImage() before first render
+let coverImageDataUri = '';
+
+/**
+ * Loads and resizes cover.jpg to A4 (794 × 1123 px) before embedding as base64.
+ * Must be awaited once before buildReportHTML() is called.
+ */
+async function initCoverImage() {
+  try {
+    const sharp = require('sharp');
+    const imgPath = path.join(__dirname, '../../cover.jpg');
+    const imgBuffer = await sharp(imgPath)
+      .resize(794, 1123, { fit: 'fill' })
+      .jpeg({ quality: 88 })
+      .toBuffer();
+    coverImageDataUri = 'data:image/jpeg;base64,' + imgBuffer.toString('base64');
+    console.log(
+      `🖼️  Cover image embedded (${(imgBuffer.length / 1024).toFixed(0)} KB after resize)`,
+    );
+  } catch (e) {
+    console.warn(
+      '⚠️  cover.jpg could not be loaded/resized — cover will use fallback styling.',
+      e.message,
+    );
+  }
+}
+
+// ─── Cover Page (SPCTEK image + audit title overlay) ──────────────────────
 
 function coverPage(meta, executiveSummary, generatedDate) {
-  const gradeColor = executiveSummary.grade.color;
-
-  const statCards = executiveSummary.keyStats
-    .map(
-      (stat) => `
-    <div class="cover-stat ${stat.highlight ? 'highlight' : ''}">
-      <span class="c-stat-icon">${stat.icon}</span>
-      <span class="c-stat-val">${stat.value}</span>
-      <span class="c-stat-lab">${stat.label}</span>
-      ${stat.subLabel ? `<span class="c-stat-sub">${stat.subLabel}</span>` : ''}
-    </div>`,
-    )
-    .join('');
-
-  const findingPills = executiveSummary.topFindings
-    .map((f) => `<div class="cover-finding-pill">${f}</div>`)
-    .join('');
+  const imgTag = coverImageDataUri
+    ? `<img src="${coverImageDataUri}" class="cover-bg-image" alt="SPCTEK Cover" />`
+    : `<div class="cover-bg-fallback"></div>`;
 
   return `
 <div class="pdf-page cover-page">
-  <div class="cover-accent-bar"></div>
-  <div class="cover-body">
-
-    <div class="cover-header">
-      <span class="agency-name">${meta.tool}</span>
-      <span class="cover-meta-tag">CONFIDENTIAL — ${generatedDate}</span>
-    </div>
-
-    <div class="cover-main">
-      <div class="cover-eyebrow">Website Performance Audit</div>
-      <h1 class="cover-title">
-        Site Performance<br/><span>Audit Report</span>
-      </h1>
-      <div class="cover-domain font-mono">${meta.domain}</div>
-
-      <div class="cover-score-row">
-        <div class="cover-score-ring">${scoreRing(executiveSummary.overallScore, 100)}</div>
-        <div class="cover-score-text">
-          <div class="score-num" style="color:${gradeColor}">${executiveSummary.overallScore}</div>
-          <div class="score-grade" style="color:${gradeColor}">${executiveSummary.grade.grade} — ${executiveSummary.grade.label}</div>
-          <div class="score-label">Overall Score / 100</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="cover-stats-row">${statCards}</div>
-    <div class="cover-findings">${findingPills}</div>
-
-    <div class="cover-cta-box">
-      <div class="cover-cta-title">What This Report Means For Your Business</div>
-      <div class="cover-cta-body">${executiveSummary.callToAction}</div>
-    </div>
-
-    <div class="cover-footer">
-      <div class="cover-footer-left">${meta.tool} v${meta.version} · ${meta.auditedPages} pages audited</div>
-      <div class="cover-footer-right">Generated ${generatedDate}</div>
+  <div class="cover-image-wrap">
+    ${imgTag}
+    <div class="cover-title-overlay">
+      <div class="cover-audit-heading">Web Audit Report</div>
+      <div class="cover-audit-domain">${meta.domain}</div>
     </div>
   </div>
 </div>`;
@@ -180,32 +164,14 @@ function executiveSummaryPage(meta, summary, generatedDate) {
 </div>`;
 }
 
-// ─── Scorecard Page ──────────────────────────────────────────────────────────
+// ─── Scorecard + Opportunities (Combined Page) ─────────────────────────────
 
-function scorecardPage(meta, categoryScorecard, generatedDate) {
+function scorecardAndOpportunitiesPage(meta, categoryScorecard, opportunitySummary, generatedDate) {
   const categories = categoryScorecard.categories
     .map((c) => categoryBar(c.name, c.description, c.score, c.grade))
     .join('');
 
-  return `
-<div class="pdf-page">
-  ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
-  <div class="section-header">
-    <div class="section-eyebrow">Performance Overview</div>
-    <h2 class="section-title">${categoryScorecard.title}</h2>
-    <p class="section-sub">Scored across ${categoryScorecard.categories.length} core categories from ${meta.auditedPages} audited pages</p>
-  </div>
-  <div class="scorecard-body">
-    ${categories}
-  </div>
-  ${pageFooterBar(meta.tool, meta.version, 'Category Scorecard')}
-</div>`;
-}
-
-// ─── Opportunities Page ──────────────────────────────────────────────────────
-
-function opportunitiesPage(meta, opportunitySummary, generatedDate) {
-  const MAX_ITEMS = 10;
+  const MAX_ITEMS = 8;
   const allItems = opportunitySummary.items || [];
   const visible = allItems.slice(0, MAX_ITEMS);
   const remaining = allItems.length - visible.length;
@@ -213,7 +179,7 @@ function opportunitiesPage(meta, opportunitySummary, generatedDate) {
   const items = visible
     .map(
       (item) => `
-    <div class="opp-summary-item">
+    <div class="opp-summary-item compact">
       <span class="opp-num">${String(item.id).padStart(2, '0')}</span>
       <div class="opp-content">
         <span class="opp-text">${item.opportunity}</span>
@@ -223,59 +189,293 @@ function opportunitiesPage(meta, opportunitySummary, generatedDate) {
     .join('');
 
   const overflowNote =
-    remaining > 0
-      ? `<div class="opp-overflow">+ ${remaining} more opportunit${remaining === 1 ? 'y' : 'ies'} identified — see page-by-page breakdown for full details</div>`
-      : '';
+    remaining > 0 ? `<div class="opp-overflow">+ ${remaining} more identified</div>` : '';
 
   return `
 <div class="pdf-page">
   ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
-  <div class="section-header">
+  <div class="section-header compact">
+    <div class="section-eyebrow">Performance Overview</div>
+    <h2 class="section-title">${categoryScorecard.title}</h2>
+    <p class="section-sub">Scored across ${categoryScorecard.categories.length} categories from ${meta.auditedPages} pages</p>
+  </div>
+  <div class="scorecard-body compact">
+    ${categories}
+  </div>
+  <div class="combined-divider"></div>
+  <div class="section-header compact inline">
     <div class="section-eyebrow">Quick Wins</div>
     <h2 class="section-title">${opportunitySummary.title}</h2>
-    <p class="section-sub">${opportunitySummary.description}</p>
   </div>
-  <div class="opp-section-body">
+  <div class="opp-section-body compact">
     <div class="opp-summary-list">
       ${items}
     </div>
     ${overflowNote}
   </div>
-  ${pageFooterBar(meta.tool, meta.version, 'Growth Opportunities')}
+  ${pageFooterBar(meta.tool, meta.version, 'Scorecard & Opportunities')}
 </div>`;
 }
 
 // ─── Page Breakdown Pages ────────────────────────────────────────────────────
 //  Groups page cards into PDF pages (2 per page for compact layout).
 
-function pageBreakdownPages(meta, pageBreakdown, generatedDate) {
-  const CARDS_PER_PAGE = 2;
-  const chunks = [];
+function pageBreakdownPages(meta, pageBreakdown, generatedDate, maxPages = 6) {
+  const CARDS_PER_PAGE = 3;
 
-  for (let i = 0; i < pageBreakdown.length; i += CARDS_PER_PAGE) {
-    chunks.push(pageBreakdown.slice(i, i + CARDS_PER_PAGE));
+  // Sort by score ascending (worst first) and take top N
+  const worstPages = [...pageBreakdown]
+    .sort((a, b) => a.overallScore - b.overallScore)
+    .slice(0, maxPages);
+
+  const chunks = [];
+  for (let i = 0; i < worstPages.length; i += CARDS_PER_PAGE) {
+    chunks.push(worstPages.slice(i, i + CARDS_PER_PAGE));
   }
 
   return chunks
     .map((chunk, ci) => {
       const cards = chunk.map((page, j) => pageCard(page, ci * CARDS_PER_PAGE + j)).join('');
-      const pageNum = `Pages ${ci * CARDS_PER_PAGE + 1}–${Math.min((ci + 1) * CARDS_PER_PAGE, pageBreakdown.length)} of ${pageBreakdown.length}`;
+      const pageNum = `Pages ${ci * CARDS_PER_PAGE + 1}–${Math.min((ci + 1) * CARDS_PER_PAGE, worstPages.length)} of ${worstPages.length} (lowest scoring)`;
 
       return `
 <div class="pdf-page">
   ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
-  <div class="section-header">
+  <div class="section-header compact">
     <div class="section-eyebrow">Detailed Analysis</div>
-    <h2 class="section-title">Page-by-Page Breakdown</h2>
-    <p class="section-sub">${pageNum}</p>
+    <h2 class="section-title">Pages Needing Most Attention</h2>
+    <p class="section-sub">${pageNum} — sorted by lowest score from ${pageBreakdown.length} total pages audited</p>
   </div>
-  <div class="pages-body">
+  <div class="pages-body compact">
     ${cards}
   </div>
   ${pageFooterBar(meta.tool, meta.version, pageNum)}
 </div>`;
     })
     .join('\n');
+}
+
+// ─── Form Validation Page (single page) ─────────────────────────────────────
+
+function formValidationPages(meta, formValidation, generatedDate) {
+  if (!formValidation || formValidation.totalForms === 0) {
+    return `
+<div class="pdf-page">
+  ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
+  <div class="section-header compact">
+    <div class="section-eyebrow">Form Analysis</div>
+    <h2 class="section-title">Form Validation Audit</h2>
+    <p class="section-sub">No forms were detected across ${meta.auditedPages} audited pages</p>
+  </div>
+  <div class="form-section-body">
+    <div class="form-empty-state">
+      <div class="form-empty-icon">📋</div>
+      <div class="form-empty-text">No forms were found on any of the audited pages. If your site uses forms, they may be dynamically loaded or behind authentication.</div>
+    </div>
+  </div>
+  ${pageFooterBar(meta.tool, meta.version, 'Form Validation')}
+</div>`;
+  }
+
+  const { stats, forms, issues } = formValidation;
+
+  // Summary stats cards
+  const statsHTML = `
+    <div class="form-stats-grid">
+      <div class="form-stat-card">
+        <div class="form-stat-val">${formValidation.totalForms}</div>
+        <div class="form-stat-label">Total Forms</div>
+      </div>
+      <div class="form-stat-card">
+        <div class="form-stat-val">${formValidation.totalPages}</div>
+        <div class="form-stat-label">Pages with Forms</div>
+      </div>
+      <div class="form-stat-card ${stats.withBrowserValidation < formValidation.totalForms ? 'warn' : ''}">
+        <div class="form-stat-val">${stats.withBrowserValidation}/${formValidation.totalForms}</div>
+        <div class="form-stat-label">Browser Validation</div>
+      </div>
+      <div class="form-stat-card ${stats.withSubmitButton < formValidation.totalForms ? 'warn' : ''}">
+        <div class="form-stat-val">${stats.withSubmitButton}/${formValidation.totalForms}</div>
+        <div class="form-stat-label">Submit Button</div>
+      </div>
+      <div class="form-stat-card">
+        <div class="form-stat-val">${stats.withRequiredFields}/${formValidation.totalForms}</div>
+        <div class="form-stat-label">Required Fields</div>
+      </div>
+      <div class="form-stat-card ${stats.withMissingValidation > 0 ? 'critical' : ''}">
+        <div class="form-stat-val">${stats.withMissingValidation}</div>
+        <div class="form-stat-label">Missing Validation</div>
+      </div>
+    </div>`;
+
+  // Individual form cards
+  const formCards = forms
+    .slice(0, 8)
+    .map((f) => {
+      const statusChecks = [
+        { label: 'Submit', ok: f.hasSubmitBtn },
+        { label: 'Email', ok: f.hasEmailField },
+        { label: 'Required', ok: f.hasRequiredFields },
+        { label: 'Validation', ok: f.browserValidationActive },
+      ];
+      const checksHTML = statusChecks
+        .map(
+          (c) =>
+            `<span class="form-check ${c.ok ? 'pass' : 'fail'}">${c.ok ? '✓' : '✕'} ${c.label}</span>`,
+        )
+        .join('');
+
+      return `
+      <div class="form-card">
+        <div class="form-card-header">
+          <span class="form-card-page">${f.page}</span>
+          <span class="form-card-fields">${f.fieldCount} field${f.fieldCount !== 1 ? 's' : ''}</span>
+        </div>
+        <div class="form-card-checks">${checksHTML}</div>
+      </div>`;
+    })
+    .join('');
+
+  // Issues list (compact, inline with form cards)
+  const issuesHTML = issues
+    .slice(0, 5)
+    .map(
+      (issue) => `
+    <div class="form-issue-item ${issue.severity}">
+      <span class="form-issue-badge ${issue.severity}">${issue.severity.toUpperCase()}</span>
+      <div class="form-issue-content">
+        <span class="form-issue-page">${issue.page}</span>
+        <span class="form-issue-msg">${issue.message}</span>
+      </div>
+    </div>`,
+    )
+    .join('');
+
+  const issuesSection =
+    issues.length > 0
+      ? `<div class="form-issues-divider"></div>
+       <div class="form-cards-label">Issues Found</div>
+       <div class="form-issues-list compact">${issuesHTML}</div>
+       ${issues.length > 5 ? `<div class="form-overflow">+ ${issues.length - 5} more issue(s)</div>` : ''}`
+      : '';
+
+  return `
+<div class="pdf-page">
+  ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
+  <div class="section-header compact">
+    <div class="section-eyebrow">Form Analysis</div>
+    <h2 class="section-title">Form Validation Audit</h2>
+    <p class="section-sub">${formValidation.totalForms} form(s) found across ${formValidation.totalPages} page(s)</p>
+  </div>
+  <div class="form-section-body">
+    ${statsHTML}
+    <div class="form-cards-label">Form Details</div>
+    <div class="form-cards-grid">
+      ${formCards}
+    </div>
+    ${issuesSection}
+  </div>
+  ${pageFooterBar(meta.tool, meta.version, 'Form Validation')}
+</div>`;
+}
+
+// ─── UI/UX Issues Pages (2 pages, 2 issues each) ───────────────────────────
+
+function uiUxPages(meta, uiUxIssues, generatedDate, maxImages = 4) {
+  if (!uiUxIssues || uiUxIssues.totalIssues === 0) {
+    return `
+<div class="pdf-page">
+  ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
+  <div class="section-header compact">
+    <div class="section-eyebrow">UI / UX Review</div>
+    <h2 class="section-title">User Interface & Experience</h2>
+    <p class="section-sub">No significant UI/UX issues detected across ${meta.auditedPages} pages</p>
+  </div>
+  <div class="uiux-section-body">
+    <div class="form-empty-state">
+      <div class="form-empty-icon">🎨</div>
+      <div class="form-empty-text">All audited pages passed UI/UX checks. Headers, footers, logos, CTAs, and responsive layouts are functioning correctly.</div>
+    </div>
+  </div>
+  ${pageFooterBar(meta.tool, meta.version, 'UI/UX Review')}
+</div>`;
+  }
+
+  const ISSUES_PER_PAGE = 2;
+  const TOTAL_PAGES = Math.max(1, Math.ceil(maxImages / ISSUES_PER_PAGE));
+  const allIssues = uiUxIssues.issues.slice(0, maxImages);
+
+  const pages = [];
+  for (let p = 0; p < TOTAL_PAGES; p++) {
+    const start = p * ISSUES_PER_PAGE;
+    const chunk = allIssues.slice(start, start + ISSUES_PER_PAGE);
+    const pageNum = p + 1;
+
+    const issueCards = chunk
+      .map((issue) => {
+        const severityColor =
+          issue.severity === 'critical'
+            ? 'var(--red)'
+            : issue.severity === 'warning'
+              ? 'var(--yellow)'
+              : 'var(--accent)';
+
+        return `
+      <div class="uiux-issue-card">
+        <div class="uiux-issue-header">
+          <span class="uiux-severity-badge" style="color:${severityColor}; border-color:${severityColor}">${issue.severity.toUpperCase()}</span>
+          <span class="uiux-issue-category">${issue.category}</span>
+          <span class="uiux-issue-pages">${issue.pageCount} page${issue.pageCount !== 1 ? 's' : ''} affected</span>
+        </div>
+        <h3 class="uiux-issue-title">${issue.title}</h3>
+        <p class="uiux-issue-desc">${issue.description}</p>
+        <div class="uiux-screenshot-placeholder">
+          <div class="uiux-screenshot-label">📷 Screenshot – Insert manually</div>
+        </div>
+      </div>`;
+      })
+      .join('');
+
+    // If fewer than 2 issues on this page, add empty screenshot space
+    const emptySlots = ISSUES_PER_PAGE - chunk.length;
+    const emptyCards =
+      emptySlots > 0 && chunk.length > 0
+        ? Array(emptySlots)
+            .fill(
+              `
+      <div class="uiux-issue-card empty">
+        <div class="uiux-screenshot-placeholder large">
+          <div class="uiux-screenshot-label">📷 Additional Screenshot Space</div>
+        </div>
+      </div>`,
+            )
+            .join('')
+        : emptySlots === ISSUES_PER_PAGE
+          ? `
+      <div class="uiux-additional-space">
+        <div class="uiux-screenshot-placeholder full-page">
+          <div class="uiux-screenshot-label">📷 Additional Screenshots & Notes</div>
+        </div>
+      </div>`
+          : '';
+
+    pages.push(`
+<div class="pdf-page">
+  ${pageHeaderBar(meta.tool, meta.domain, generatedDate)}
+  <div class="section-header compact">
+    <div class="section-eyebrow">UI / UX Review</div>
+    <h2 class="section-title">User Interface & Experience Issues</h2>
+    <p class="section-sub">Page ${pageNum} of ${TOTAL_PAGES} — ${Math.min(uiUxIssues.totalIssues, maxImages)} issues shown across ${meta.auditedPages} pages</p>
+  </div>
+  <div class="uiux-section-body">
+    ${issueCards}
+    ${emptyCards}
+  </div>
+  ${pageFooterBar(meta.tool, meta.version, 'UI/UX Review ' + pageNum + '/' + TOTAL_PAGES)}
+</div>`);
+  }
+
+  return pages.join('\n');
 }
 
 // ─── Closing Page ────────────────────────────────────────────────────────────
@@ -345,10 +545,12 @@ function closingPage(meta, executiveSummary) {
 }
 
 module.exports = {
+  initCoverImage,
   coverPage,
   executiveSummaryPage,
-  scorecardPage,
-  opportunitiesPage,
+  scorecardAndOpportunitiesPage,
   pageBreakdownPages,
+  formValidationPages,
+  uiUxPages,
   closingPage,
 };

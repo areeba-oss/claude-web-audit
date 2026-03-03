@@ -1,10 +1,10 @@
 /**
  * styles.js — All CSS for the HTML audit report.
- * Consistent light theme across every page (cover → content → closing).
+ * Orange & Black theme across every page (cover → content → closing).
  */
 
 function getStyles(accentColor) {
-  const accent = accentColor || '#1d4ed8';
+  const accent = accentColor || '#e8590c';
 
   return `
     /* ── Reset & Variables ── */
@@ -12,23 +12,24 @@ function getStyles(accentColor) {
 
     :root {
       --bg: #ffffff;
-      --surface: #f8fafc;
-      --surface2: #f1f5f9;
-      --border: #e2e8f0;
-      --border-bright: #cbd5e1;
-      --text: #0f172a;
-      --text-secondary: #334155;
-      --muted: #64748b;
+      --surface: #faf5f0;
+      --surface2: #f5ebe0;
+      --border: #e8d5c4;
+      --border-bright: #d4b896;
+      --text: #1a1a1a;
+      --text-secondary: #3d3d3d;
+      --muted: #6b6b6b;
       --accent: ${accent};
-      --accent-light: #eff6ff;
-      --accent2: #6d28d9;
+      --accent-light: #fff4ed;
+      --accent2: #c2410c;
       --green: #16a34a;
       --green-light: #f0fdf4;
       --yellow: #b45309;
       --yellow-light: #fffbeb;
       --red: #dc2626;
       --red-light: #fef2f2;
-      --navy: #0f172a;
+      --navy: #1a1a1a;
+      --black: #0a0a0a;
       --page-w: 210mm;
       --page-h: 297mm;
     }
@@ -78,7 +79,7 @@ function getStyles(accentColor) {
        PAGE HEADER BAR  (top of every content page)
     ───────────────────────────────────────── */
     .page-header-bar {
-      background: var(--accent);
+      background: var(--black);
       padding: 3mm 10mm;
       display: flex;
       justify-content: space-between;
@@ -91,7 +92,7 @@ function getStyles(accentColor) {
       font-weight: 700;
       letter-spacing: 0.22em;
       text-transform: uppercase;
-      color: #ffffff;
+      color: var(--accent);
     }
 
     .page-header-bar .phb-right {
@@ -126,241 +127,69 @@ function getStyles(accentColor) {
     }
 
     /* ─────────────────────────────────────────
-       COVER PAGE
+       COVER PAGE — Full-bleed image with title overlay
     ───────────────────────────────────────── */
     .cover-page {
-      background: var(--bg);
+      background: var(--black);
       padding: 0;
+      overflow: hidden;
     }
 
     .cover-accent-bar {
       height: 6mm;
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      background: linear-gradient(90deg, var(--accent), #f97316, var(--accent2));
       flex-shrink: 0;
     }
 
-    .cover-body {
+    /* Image-based cover */
+    .cover-image-wrap {
       flex: 1;
-      padding: 12mm 14mm 8mm;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cover-bg-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: fill;
+      display: block;
+    }
+
+    .cover-bg-fallback {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--black) 0%, #1a1a1a 100%);
+    }
+
+    .cover-title-overlay {
+      position: absolute;
+      top: 50%;
+      left: 42%;
+      right: 6%;
+      transform: translateY(-50%);
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
     }
 
-    .cover-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 12mm;
-    }
-
-    .agency-name {
-      font-size: 10px;
-      font-weight: 700;
-      letter-spacing: 0.3em;
-      text-transform: uppercase;
-      color: var(--accent);
-    }
-
-    .cover-meta-tag {
-      font-family: 'DM Mono', monospace;
-      font-size: 8.5px;
-      color: var(--muted);
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 3px 10px;
-      border-radius: 3px;
-    }
-
-    .cover-main {
-      margin-bottom: 10mm;
-    }
-
-    .cover-eyebrow {
-      font-family: 'DM Mono', monospace;
-      font-size: 9px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 4mm;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .cover-eyebrow::before {
-      content: '';
-      width: 24px;
-      height: 2px;
-      background: var(--accent);
-    }
-
-    .cover-title {
-      font-size: 40px;
+    .cover-audit-heading {
+      font-size: 34px;
       font-weight: 800;
-      line-height: 1.08;
-      letter-spacing: -0.03em;
-      color: var(--navy);
-      margin-bottom: 4mm;
+      color: #0b2545;
+      letter-spacing: -0.02em;
+      line-height: 1.15;
     }
 
-    .cover-title span { color: var(--accent); }
-
-    .cover-domain {
+    .cover-audit-domain {
       font-family: 'DM Mono', monospace;
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10mm;
-      padding: 2mm 0;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .cover-score-row {
-      display: flex;
-      align-items: center;
-      gap: 8mm;
-      margin-bottom: 10mm;
-    }
-
-    .cover-score-ring svg { display: block; }
-
-    .cover-score-text .score-num {
-      font-size: 48px;
-      font-weight: 800;
-      line-height: 1;
-    }
-
-    .cover-score-text .score-grade {
-      font-family: 'DM Mono', monospace;
-      font-size: 10px;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      margin-top: 2px;
-    }
-
-    .cover-score-text .score-label {
-      font-size: 11px;
-      color: var(--muted);
-      margin-top: 2px;
-    }
-
-    /* Cover stats grid */
-    .cover-stats-row {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 3mm;
-      margin-bottom: 8mm;
-    }
-
-    .cover-stat {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 5px;
-      padding: 4mm 3mm;
-      text-align: center;
-    }
-
-    .cover-stat.highlight {
-      border-color: var(--red);
-      background: var(--red-light);
-    }
-
-    .cover-stat .c-stat-icon {
-      font-family: 'DM Mono', monospace;
-      font-size: 9px;
-      font-weight: 700;
-      letter-spacing: 0.05em;
-      display: inline-block;
-      background: var(--accent-light);
-      color: var(--accent);
-      border: 1px solid #bfdbfe;
-      border-radius: 3px;
-      padding: 1px 5px;
-      margin-bottom: 3px;
-    }
-    .cover-stat.highlight .c-stat-icon {
-      background: var(--red-light);
-      color: var(--red);
-      border-color: #fecaca;
-    }
-    .cover-stat .c-stat-val {
-      font-size: 20px;
-      font-weight: 800;
-      color: var(--navy);
-      line-height: 1;
-      display: block;
-    }
-    .cover-stat.highlight .c-stat-val { color: var(--red); }
-    .cover-stat .c-stat-lab {
-      font-size: 8px;
-      color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: 0.06em;
-      display: block;
-      margin-top: 2px;
-    }
-    .cover-stat .c-stat-sub {
-      font-family: 'DM Mono', monospace;
-      font-size: 8.5px;
-      color: var(--green);
-      display: block;
-      margin-top: 1px;
-    }
-
-    /* Cover findings pills */
-    .cover-findings {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2mm;
-      margin-bottom: 6mm;
-    }
-
-    .cover-finding-pill {
-      font-size: 9.5px;
-      padding: 3px 10px;
-      border-radius: 3px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
-    }
-
-    /* Cover CTA box */
-    .cover-cta-box {
-      background: var(--accent-light);
-      border: 1px solid #bfdbfe;
-      border-radius: 6px;
-      padding: 5mm 6mm;
-      margin-bottom: 4mm;
-    }
-
-    .cover-cta-title {
       font-size: 12px;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 2px;
-    }
-
-    .cover-cta-body {
-      font-size: 10.5px;
-      color: var(--text-secondary);
-      line-height: 1.55;
-    }
-
-    .cover-footer {
-      margin-top: auto;
-      padding-top: 4mm;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .cover-footer-left,
-    .cover-footer-right {
-      font-size: 8.5px;
-      color: var(--muted);
-      font-family: 'DM Mono', monospace;
+      color: #e35d22;
+      margin-top: 4mm;
+      letter-spacing: 0.04em;
+      word-break: break-all;
     }
 
     /* ─────────────────────────────────────────
@@ -392,6 +221,43 @@ function getStyles(accentColor) {
       font-size: 10.5px;
       color: var(--muted);
       margin-top: 2px;
+    }
+
+    /* Compact section header variant */
+    .section-header.compact {
+      padding: 4mm 10mm 2.5mm;
+      margin-bottom: 2mm;
+    }
+
+    .section-header.compact .section-title { font-size: 16px; }
+    .section-header.compact .section-sub { font-size: 9.5px; }
+
+    .section-header.compact.inline {
+      border-bottom: none;
+      padding-top: 2mm;
+      margin-bottom: 1mm;
+    }
+
+    /* Combined page divider */
+    .combined-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 2mm 10mm;
+    }
+
+    /* Form issues divider */
+    .form-issues-divider {
+      height: 1px;
+      background: var(--border);
+      margin: 3mm 0;
+    }
+
+    .form-issues-list.compact {
+      gap: 2mm;
+    }
+
+    .form-issues-list.compact .form-issue-item {
+      padding: 2mm 3mm;
     }
 
     /* ─────────────────────────────────────────
@@ -437,7 +303,7 @@ function getStyles(accentColor) {
       letter-spacing: 0.04em;
       background: var(--accent-light);
       color: var(--accent);
-      border: 1px solid #bfdbfe;
+      border: 1px solid #f9c7a8;
       border-radius: 3px;
       padding: 2px 5px;
       flex-shrink: 0;
@@ -514,6 +380,16 @@ function getStyles(accentColor) {
       justify-content: center;
     }
 
+    .scorecard-body.compact {
+      padding: 0 10mm 2mm;
+      justify-content: flex-start;
+    }
+
+    .scorecard-body.compact .category-row {
+      padding: 2.5mm 4mm;
+      margin-bottom: 1.5mm;
+    }
+
     .category-row {
       display: grid;
       grid-template-columns: 150px 1fr 105px;
@@ -563,6 +439,12 @@ function getStyles(accentColor) {
       flex-direction: column;
       justify-content: center;
       gap: 4mm;
+    }
+
+    .pages-body.compact {
+      padding: 0 10mm 2mm;
+      gap: 2.5mm;
+      justify-content: center;
     }
 
     .page-card {
@@ -688,7 +570,7 @@ function getStyles(accentColor) {
     .finding-icon.critical { background: var(--red-light); color: var(--red); border: 1px solid #fecaca; }
     .finding-icon.warning  { background: var(--yellow-light); color: var(--yellow); border: 1px solid #fde68a; }
     .finding-icon.success  { background: var(--green-light); color: var(--green); border: 1px solid #bbf7d0; }
-    .finding-icon.info     { background: var(--accent-light); color: var(--accent); border: 1px solid #bfdbfe; }
+    .finding-icon.info     { background: var(--accent-light); color: var(--accent); border: 1px solid #f9c7a8; }
 
     .opp-item {
       font-size: 8.5px;
@@ -755,6 +637,11 @@ function getStyles(accentColor) {
       justify-content: center;
     }
 
+    .opp-section-body.compact {
+      padding: 0 10mm 2mm;
+      justify-content: flex-start;
+    }
+
     .opp-summary-list {
       display: flex;
       flex-direction: column;
@@ -767,6 +654,20 @@ function getStyles(accentColor) {
       gap: 4mm;
       padding: 3.5mm 4mm;
       border-bottom: 1px solid var(--border);
+    }
+
+    .opp-summary-item.compact {
+      padding: 2.5mm 4mm;
+      gap: 3mm;
+    }
+
+    .opp-summary-item.compact .opp-num {
+      font-size: 13px;
+      min-width: 18px;
+    }
+
+    .opp-summary-item.compact .opp-text {
+      font-size: 9px;
     }
 
     .opp-summary-item:first-child {
@@ -804,7 +705,7 @@ function getStyles(accentColor) {
       margin-top: 4mm;
       padding: 3mm 4mm;
       background: var(--accent-light);
-      border: 1px solid #bfdbfe;
+      border: 1px solid #f9c7a8;
       border-radius: 4px;
       font-size: 9.5px;
       color: var(--accent);
@@ -813,9 +714,9 @@ function getStyles(accentColor) {
     }
 
     /* ─────────────────────────────────────────
-       CLOSING PAGE
+       CLOSING PAGE — White background
     ───────────────────────────────────────── */
-    .closing-page { background: var(--bg); padding: 0; }
+    .closing-page { background: var(--bg); padding: 0; color: var(--text); }
 
     .closing-body-wrap {
       flex: 1;
@@ -937,7 +838,7 @@ function getStyles(accentColor) {
 
     .closing-cta-card {
       background: var(--accent-light);
-      border: 1px solid #bfdbfe;
+      border: 1px solid #f9c7a8;
       border-radius: 6px;
       padding: 6mm 7mm;
     }
@@ -965,6 +866,303 @@ function getStyles(accentColor) {
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       flex-shrink: 0;
       margin-top: auto;
+    }
+
+    /* ─────────────────────────────────────────
+       FORM VALIDATION SECTION
+    ───────────────────────────────────────── */
+    .form-section-body {
+      padding: 0 10mm 4mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-empty-state {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .form-empty-icon { font-size: 36px; margin-bottom: 4mm; }
+    .form-empty-text { font-size: 11px; color: var(--muted); max-width: 320px; line-height: 1.6; }
+
+    .form-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3mm;
+      margin-bottom: 5mm;
+    }
+
+    .form-stat-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 3.5mm 4mm;
+      text-align: center;
+    }
+
+    .form-stat-card.warn { border-color: var(--yellow); background: var(--yellow-light); }
+    .form-stat-card.critical { border-color: var(--red); background: var(--red-light); }
+
+    .form-stat-val {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1;
+      font-family: 'DM Mono', monospace;
+    }
+
+    .form-stat-card.warn .form-stat-val { color: var(--yellow); }
+    .form-stat-card.critical .form-stat-val { color: var(--red); }
+
+    .form-stat-label {
+      font-size: 8.5px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-top: 2px;
+    }
+
+    .form-cards-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 8.5px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 2.5mm;
+      font-weight: 600;
+    }
+
+    .form-cards-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5mm;
+    }
+
+    .form-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 5px;
+      padding: 3mm;
+      font-size: 9px;
+    }
+
+    .form-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2mm;
+    }
+
+    .form-card-page {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .form-card-fields {
+      font-family: 'DM Mono', monospace;
+      font-size: 8px;
+      color: var(--muted);
+      background: var(--surface2);
+      padding: 1px 5px;
+      border-radius: 3px;
+    }
+
+    .form-card-checks {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+    }
+
+    .form-check {
+      font-size: 8px;
+      padding: 1px 5px;
+      border-radius: 3px;
+      font-weight: 500;
+    }
+
+    .form-check.pass { background: var(--green-light); color: var(--green); border: 1px solid #bbf7d0; }
+    .form-check.fail { background: var(--red-light); color: var(--red); border: 1px solid #fecaca; }
+
+    .form-missing {
+      margin-top: 2mm;
+      font-size: 8px;
+      color: var(--red);
+      font-weight: 500;
+    }
+
+    .form-issues-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5mm;
+    }
+
+    .form-issue-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 3mm;
+      padding: 3mm 4mm;
+      border-radius: 5px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+    }
+
+    .form-issue-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 7px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      padding: 2px 5px;
+      border-radius: 3px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    .form-issue-badge.critical { background: var(--red-light); color: var(--red); }
+    .form-issue-badge.warning { background: var(--yellow-light); color: var(--yellow); }
+    .form-issue-badge.info { background: var(--accent-light); color: var(--accent); }
+
+    .form-issue-content { flex: 1; }
+
+    .form-issue-page {
+      font-family: 'DM Mono', monospace;
+      font-size: 8px;
+      font-weight: 600;
+      color: var(--navy);
+      display: block;
+      margin-bottom: 1px;
+    }
+
+    .form-issue-msg {
+      font-size: 9px;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .form-overflow {
+      margin-top: 3mm;
+      padding: 2.5mm 4mm;
+      background: var(--accent-light);
+      border: 1px solid #f9c7a8;
+      border-radius: 4px;
+      font-size: 9px;
+      color: var(--accent);
+      font-weight: 500;
+      text-align: center;
+    }
+
+    /* ─────────────────────────────────────────
+       UI / UX SECTION
+    ───────────────────────────────────────── */
+    .uiux-section-body {
+      padding: 0 10mm 4mm;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4mm;
+    }
+
+    .uiux-issue-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 4mm 5mm;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .uiux-issue-card.empty {
+      background: var(--surface);
+      border-style: dashed;
+    }
+
+    .uiux-issue-header {
+      display: flex;
+      align-items: center;
+      gap: 3mm;
+      margin-bottom: 2mm;
+    }
+
+    .uiux-severity-badge {
+      font-family: 'DM Mono', monospace;
+      font-size: 7.5px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      padding: 2px 6px;
+      border-radius: 3px;
+      border: 1px solid;
+      background: transparent;
+    }
+
+    .uiux-issue-category {
+      font-family: 'DM Mono', monospace;
+      font-size: 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .uiux-issue-pages {
+      margin-left: auto;
+      font-family: 'DM Mono', monospace;
+      font-size: 8px;
+      color: var(--muted);
+    }
+
+    .uiux-issue-title {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 2mm;
+    }
+
+    .uiux-issue-desc {
+      font-size: 9.5px;
+      color: var(--text-secondary);
+      line-height: 1.55;
+      margin-bottom: 3mm;
+    }
+
+    .uiux-screenshot-placeholder {
+      background: var(--surface);
+      border: 2px dashed var(--border-bright);
+      border-radius: 5px;
+      padding: 4mm;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 1;
+      min-height: 60mm;
+    }
+
+    .uiux-screenshot-placeholder.large {
+      min-height: 80mm;
+    }
+
+    .uiux-screenshot-placeholder.full-page {
+      flex: 1;
+      min-height: 100mm;
+    }
+
+    .uiux-screenshot-label {
+      font-family: 'DM Mono', monospace;
+      font-size: 9px;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .uiux-additional-space {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
     }
   `;
 }
