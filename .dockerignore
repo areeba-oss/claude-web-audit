@@ -1,0 +1,8 @@
+node_modules
+outputs/
+.env
+*.rar
+*.zip
+.git
+.gitignore
+README.md
