@@ -18,9 +18,20 @@ function normalizeUrl(link, base) {
 }
 
 async function fetchAllPages(homepage, maxPages = 25) {
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: false, // Headed mode for stability
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--disable-dev-shm-usage',
+      '--no-sandbox',
+      '--disable-gpu',
+    ],
+  });
   const context = await browser.newContext({
     ignoreHTTPSErrors: true,
+    viewport: { width: 1920, height: 1080 }, // Standard 1080p screen
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
     // Block images/fonts/media during crawl — we only need links, not visual assets
     // This alone can cut crawl time by 40-60%
   });
@@ -49,6 +60,10 @@ async function fetchAllPages(homepage, maxPages = 25) {
   // ── Parallel worker pool ───────────────────────────────────────────────
   async function worker() {
     const page = await context.newPage();
+    // Hide webdriver property via injection
+    await page.addInitScript(() => {
+      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+    });
     try {
       while (true) {
         // Grab next URL — stop if queue empty or limit reached

@@ -76,7 +76,7 @@ function buildReportHTML(report, options = {}) {
 /**
  * Generate PDF report from JSON data
  * @param {string} jsonPath - Path to input JSON file (relative to outputs/report-json/)
- * @param {string} outputPath - Path for output PDF (relative to outputs/report-final/)
+ * @param {string|null} outputPath - Path for output PDF (relative to outputs/report-final/) or null to skip PDF
  * @param {Object} options
  * @param {boolean} [options.includePageBreakdown=true]
  * @param {number}  [options.maxPages=6]
@@ -84,11 +84,9 @@ function buildReportHTML(report, options = {}) {
  */
 async function generateReport(jsonPath, outputPath, options = {}) {
   const { includePageBreakdown = true, maxPages = 6, maxImages = 4 } = options;
-  await initCoverImage();
+
   const report = JSON.parse(fs.readFileSync(`outputs/report-json/${jsonPath}`, 'utf8'));
   const html = buildReportHTML(report, { includePageBreakdown, maxPages, maxImages });
-
-  fs.mkdirSync('outputs/report-final', { recursive: true });
 
   const reportType = includePageBreakdown ? 'Full' : 'Mini';
   const breakdownPages = Math.ceil(Math.min(report.pageBreakdown.length, maxPages) / 3);
@@ -98,10 +96,16 @@ async function generateReport(jsonPath, outputPath, options = {}) {
     ? `${4 + breakdownPages + formPages + uiuxPageCount} pages`
     : '4 pages';
 
-  console.log(`✅  ${reportType} report generated`);
+  console.log(`✅  ${reportType} HTML report built`);
   console.log(`📄  ${pageCount} (${includePageBreakdown ? 'with' : 'without'} page breakdown)`);
 
-  await convertToPDF(html, `outputs/report-final/${outputPath}`);
+  // Only generate PDF if outputPath is provided
+  if (outputPath) {
+    await initCoverImage();
+    fs.mkdirSync('outputs/report-final', { recursive: true });
+    await convertToPDF(html, `outputs/report-final/${outputPath}`);
+    console.log(`✅  PDF saved: outputs/report-final/${outputPath}`);
+  }
 }
 
 module.exports = { buildReportHTML, generateReport };

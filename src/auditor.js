@@ -1,4 +1,5 @@
 const fs = require('fs').promises;
+const path = require('path');
 const { chromium } = require('playwright');
 
 // Utilities
@@ -24,8 +25,12 @@ function isHomepage(url) {
   }
 }
 
-async function auditPage(browser, url) {
-  const page = await browser.newPage();
+async function auditPage(context, url) {
+  const page = await context.newPage();
+  // Hide webdriver property via injection
+  await page.addInitScript(() => {
+    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
+  });
   const consoleErrors = [];
   const consoleWarnings = [];
   const failedRequests = [];
@@ -40,6 +45,9 @@ async function auditPage(browser, url) {
 
   try {
     console.log(`\n  📄 → ${url}`);
+    // Add small random delay (0.5–2 seconds) before navigation for stable, natural pacing
+    const delayMs = Math.random() * 1500 + 500;
+    await new Promise((r) => setTimeout(r, delayMs));
     const response = await page.goto(url, {
       waitUntil: 'domcontentloaded',
       timeout: 60000,
@@ -203,7 +211,7 @@ async function auditPage(browser, url) {
       basicHealthCheck(url, page, aiResult, requestStats),
       formsAudit(page, url, aiResult),
       uiLayoutValidation(page, url, aiResult),
-      ecommerceAudit(browser, page, url, aiResult),
+      ecommerceAudit(context, page, url, aiResult),
       performanceAudit(page, url, aiResult, perfRaw),
       navigationLinksAudit(page, url, aiResult, linkData),
     ]);
@@ -390,7 +398,26 @@ async function runAudit(inputUrl, maxPages = 25) {
 
   console.log(`\n━━━ Auditing ${urls.length} page(s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
 
-  const browser = await chromium.launch({ headless: true });
+  const browser = await chromium.launch({
+    headless: false, // Headed mode for stability and detection mitigation
+    args: [
+      '--disable-blink-features=AutomationControlled',
+      '--disable-dev-shm-usage',
+      '--no-sandbox',
+      '--disable-gpu',
+    ],
+  });
+
+  // Create context with stealth settings
+  const context = await browser.newContext({
+    viewport: { width: 1920, height: 1080 },
+    userAgent:
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
+    locale: 'en-US',
+    timezoneId: 'America/New_York',
+    geolocation: { latitude: 40.7128, longitude: -74.006 },
+  });
+
   const results = [];
 
   for (let i = 0; i < urls.length; i += CONCURRENCY) {
@@ -398,9 +425,10 @@ async function runAudit(inputUrl, maxPages = 25) {
     console.log(
       `\n  ── Batch ${Math.floor(i / CONCURRENCY) + 1}/${Math.ceil(urls.length / CONCURRENCY)} ──`,
     );
-    results.push(...(await Promise.all(batch.map((u) => auditPage(browser, u)))));
+    results.push(...(await Promise.all(batch.map((u) => auditPage(context, u)))));
   }
 
+  await context.close();
   await browser.close();
   printSummary(results);
 
@@ -422,7 +450,16 @@ if (require.main === module) {
 
   runAudit(inputUrl)
     .then(async (results) => {
-      const file = 'outputs/raw-json/results.json';
+      // Find next available filename (results-1.json, results-2.json, etc.)
+      const outDir = 'outputs/raw-json';
+      await fs.mkdir(outDir, { recursive: true });
+      let filename = 'results.json';
+      let counter = 1;
+      while (await fs.stat(path.join(outDir, filename)).catch(() => null)) {
+        filename = `results-${counter}.json`;
+        counter++;
+      }
+      const file = path.join(outDir, filename);
       await fs.writeFile(file, JSON.stringify(results, null, 2), 'utf-8');
       console.log(`  💾 Saved → ${file}\n`);
       process.exit(0);
