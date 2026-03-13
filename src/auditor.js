@@ -1,6 +1,28 @@
 const fs = require('fs').promises;
-const path = require('path');
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-core');
+
+// Chromium executable path — priority order:
+// 1. CHROME_EXECUTABLE_PATH env var (set in .env for custom path)
+// 2. Playwright's own bundled Chromium (installed via npx playwright install chromium)
+// 3. Google Chrome system install
+function getChromiumPath() {
+  if (process.env.CHROME_EXECUTABLE_PATH) return process.env.CHROME_EXECUTABLE_PATH;
+  const candidates = [
+    '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', // Playwright bundled (this server)
+    '/opt/google/chrome/chrome', // Google Chrome
+    '/usr/bin/chromium-browser', // System Chromium (Ubuntu/Debian)
+    '/usr/bin/chromium', // System Chromium (other distros)
+    '/usr/bin/google-chrome', // Google Chrome (system)
+  ];
+  const fss = require('fs');
+  for (const p of candidates) {
+    try {
+      fss.accessSync(p, fss.constants.X_OK);
+      return p;
+    } catch {}
+  }
+  return undefined; // Let playwright-core throw a clear error
+}
 
 // Utilities
 const fetchAllPages = require('./utilities/fetchAllPages');
@@ -399,25 +421,10 @@ async function runAudit(inputUrl, maxPages = 25) {
   console.log(`\n━━━ Auditing ${urls.length} page(s) ━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
 
   const browser = await chromium.launch({
-    headless: false, // Headed mode for stability and detection mitigation
-    args: [
-      '--disable-blink-features=AutomationControlled',
-      '--disable-dev-shm-usage',
-      '--no-sandbox',
-      '--disable-gpu',
-    ],
+    headless: true,
+    executablePath: getChromiumPath(),
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
   });
-
-  // Create context with stealth settings
-  const context = await browser.newContext({
-    viewport: { width: 1920, height: 1080 },
-    userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
-    locale: 'en-US',
-    timezoneId: 'America/New_York',
-    geolocation: { latitude: 40.7128, longitude: -74.006 },
-  });
-
   const results = [];
 
   for (let i = 0; i < urls.length; i += CONCURRENCY) {

@@ -1,6 +1,6 @@
 // fetchAllPages.js — parallel crawler with N concurrent workers
 
-const { chromium } = require('playwright');
+const { chromium } = require('playwright-core');
 const { URL } = require('url');
 
 const CRAWL_CONCURRENCY = 5; // pages crawled simultaneously
@@ -18,14 +18,30 @@ function normalizeUrl(link, base) {
 }
 
 async function fetchAllPages(homepage, maxPages = 25) {
+  // Resolve chromium path same as auditor.js
+  const fss = require('fs');
+  function getChromiumPath() {
+    if (process.env.CHROME_EXECUTABLE_PATH) return process.env.CHROME_EXECUTABLE_PATH;
+    const candidates = [
+      '/opt/pw-browsers/chromium-1194/chrome-linux/chrome',
+      '/opt/google/chrome/chrome',
+      '/usr/bin/chromium-browser',
+      '/usr/bin/chromium',
+      '/usr/bin/google-chrome',
+    ];
+    for (const p of candidates) {
+      try {
+        fss.accessSync(p, fss.constants.X_OK);
+        return p;
+      } catch {}
+    }
+    return undefined;
+  }
+
   const browser = await chromium.launch({
-    headless: false, // Headed mode for stability
-    args: [
-      '--disable-blink-features=AutomationControlled',
-      '--disable-dev-shm-usage',
-      '--no-sandbox',
-      '--disable-gpu',
-    ],
+    headless: true,
+    executablePath: getChromiumPath(),
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
   });
   const context = await browser.newContext({
     ignoreHTTPSErrors: true,

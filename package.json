@@ -17,9 +17,10 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "playwright": "^1.58.1",
-    "playwright-extra": "^4.3.6",
-    "sharp": "^0.34.5"
+    "dotenv": "^17.3.1",
+    "sharp": "^0.34.5",
+    "playwright-core": "^1.58.1",
+    "playwright-extra": "^4.3.6"
   },
   "devDependencies": {
     "prettier": "^3.8.1"
