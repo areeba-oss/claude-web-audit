@@ -9,17 +9,14 @@ function getChromiumPath() {
   if (process.env.CHROME_EXECUTABLE_PATH) return process.env.CHROME_EXECUTABLE_PATH;
   const candidates = [
     '/opt/pw-browsers/chromium-1194/chrome-linux/chrome', // Playwright bundled (this server)
-    '/opt/google/chrome/chrome', // Google Chrome
-    '/usr/bin/chromium-browser', // System Chromium (Ubuntu/Debian)
-    '/usr/bin/chromium', // System Chromium (other distros)
-    '/usr/bin/google-chrome', // Google Chrome (system)
+    '/opt/google/chrome/chrome',                           // Google Chrome
+    '/usr/bin/chromium-browser',                           // System Chromium (Ubuntu/Debian)
+    '/usr/bin/chromium',                                   // System Chromium (other distros)
+    '/usr/bin/google-chrome',                              // Google Chrome (system)
   ];
   const fss = require('fs');
   for (const p of candidates) {
-    try {
-      fss.accessSync(p, fss.constants.X_OK);
-      return p;
-    } catch {}
+    try { fss.accessSync(p, fss.constants.X_OK); return p; } catch {}
   }
   return undefined; // Let playwright-core throw a clear error
 }
@@ -47,12 +44,8 @@ function isHomepage(url) {
   }
 }
 
-async function auditPage(context, url) {
-  const page = await context.newPage();
-  // Hide webdriver property via injection
-  await page.addInitScript(() => {
-    Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-  });
+async function auditPage(browser, url) {
+  const page = await browser.newPage();
   const consoleErrors = [];
   const consoleWarnings = [];
   const failedRequests = [];
@@ -67,9 +60,6 @@ async function auditPage(context, url) {
 
   try {
     console.log(`\n  📄 → ${url}`);
-    // Add small random delay (0.5–2 seconds) before navigation for stable, natural pacing
-    const delayMs = Math.random() * 1500 + 500;
-    await new Promise((r) => setTimeout(r, delayMs));
     const response = await page.goto(url, {
       waitUntil: 'domcontentloaded',
       timeout: 60000,
@@ -233,7 +223,7 @@ async function auditPage(context, url) {
       basicHealthCheck(url, page, aiResult, requestStats),
       formsAudit(page, url, aiResult),
       uiLayoutValidation(page, url, aiResult),
-      ecommerceAudit(context, page, url, aiResult),
+      ecommerceAudit(browser, page, url, aiResult),
       performanceAudit(page, url, aiResult, perfRaw),
       navigationLinksAudit(page, url, aiResult, linkData),
     ]);
@@ -423,7 +413,12 @@ async function runAudit(inputUrl, maxPages = 25) {
   const browser = await chromium.launch({
     headless: true,
     executablePath: getChromiumPath(),
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+    ],
   });
   const results = [];
 
@@ -432,10 +427,9 @@ async function runAudit(inputUrl, maxPages = 25) {
     console.log(
       `\n  ── Batch ${Math.floor(i / CONCURRENCY) + 1}/${Math.ceil(urls.length / CONCURRENCY)} ──`,
     );
-    results.push(...(await Promise.all(batch.map((u) => auditPage(context, u)))));
+    results.push(...(await Promise.all(batch.map((u) => auditPage(browser, u)))));
   }
 
-  await context.close();
   await browser.close();
   printSummary(results);
 
@@ -457,16 +451,7 @@ if (require.main === module) {
 
   runAudit(inputUrl)
     .then(async (results) => {
-      // Find next available filename (results-1.json, results-2.json, etc.)
-      const outDir = 'outputs/raw-json';
-      await fs.mkdir(outDir, { recursive: true });
-      let filename = 'results.json';
-      let counter = 1;
-      while (await fs.stat(path.join(outDir, filename)).catch(() => null)) {
-        filename = `results-${counter}.json`;
-        counter++;
-      }
-      const file = path.join(outDir, filename);
+      const file = 'outputs/raw-json/results.json';
       await fs.writeFile(file, JSON.stringify(results, null, 2), 'utf-8');
       console.log(`  💾 Saved → ${file}\n`);
       process.exit(0);

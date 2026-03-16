@@ -30,10 +30,7 @@ async function fetchAllPages(homepage, maxPages = 25) {
       '/usr/bin/google-chrome',
     ];
     for (const p of candidates) {
-      try {
-        fss.accessSync(p, fss.constants.X_OK);
-        return p;
-      } catch {}
+      try { fss.accessSync(p, fss.constants.X_OK); return p; } catch {}
     }
     return undefined;
   }
@@ -41,13 +38,15 @@ async function fetchAllPages(homepage, maxPages = 25) {
   const browser = await chromium.launch({
     headless: true,
     executablePath: getChromiumPath(),
-    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage', '--disable-gpu'],
+    args: [
+      '--no-sandbox',
+      '--disable-setuid-sandbox',
+      '--disable-dev-shm-usage',
+      '--disable-gpu',
+    ],
   });
   const context = await browser.newContext({
     ignoreHTTPSErrors: true,
-    viewport: { width: 1920, height: 1080 }, // Standard 1080p screen
-    userAgent:
-      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36',
     // Block images/fonts/media during crawl — we only need links, not visual assets
     // This alone can cut crawl time by 40-60%
   });
@@ -76,10 +75,6 @@ async function fetchAllPages(homepage, maxPages = 25) {
   // ── Parallel worker pool ───────────────────────────────────────────────
   async function worker() {
     const page = await context.newPage();
-    // Hide webdriver property via injection
-    await page.addInitScript(() => {
-      Object.defineProperty(navigator, 'webdriver', { get: () => undefined });
-    });
     try {
       while (true) {
         // Grab next URL — stop if queue empty or limit reached

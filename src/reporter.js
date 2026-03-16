@@ -1051,7 +1051,6 @@ module.exports = { buildReport };
 
 // ─── CLI entry ───────────────────────────────────────────────────────────────
 if (require.main === module) {
-  const path = require('path');
   const inputPath = process.argv[2];
   if (!inputPath) {
     console.error('Usage: npm run report <input.json>');
@@ -1062,16 +1061,7 @@ if (require.main === module) {
   const pages = Array.isArray(raw) ? raw : [raw];
   const report = buildReport(pages);
 
-  // Find next available filename (report.json, report-1.json, report-2.json, etc.)
-  const outDir = 'outputs/report-json';
-  fs.mkdirSync(outDir, { recursive: true });
-  let filename = 'report.json';
-  let counter = 1;
-  while (fs.existsSync(path.join(outDir, filename))) {
-    filename = `report-${counter}.json`;
-    counter++;
-  }
-  const outFile = path.join(outDir, filename);
+  const outFile = 'outputs/report-json/report.json';
   fs.writeFileSync(outFile, JSON.stringify(report, null, 2));
 
   console.log(`✅  Report written to: ${outFile}`);
